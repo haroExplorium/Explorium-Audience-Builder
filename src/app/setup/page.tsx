@@ -41,7 +41,7 @@ export default function SetupPage() {
     <div className="min-h-screen bg-[#F8F9FA] flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         {/* Card */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8 py-10">
+        <div className="bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-gray-100 px-8 py-10">
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <div className="w-12 h-12 bg-[#1A73E8] rounded-xl flex items-center justify-center text-white font-bold text-xl">
@@ -50,7 +50,7 @@ export default function SetupPage() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-2xl font-bold text-gray-900 text-center mb-1">
+          <h1 className="text-2xl font-serif text-gray-900 text-center mb-1">
             Welcome to Explorium
           </h1>
           <p className="text-sm text-gray-500 text-center mb-8">

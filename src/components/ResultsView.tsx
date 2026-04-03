@@ -54,7 +54,7 @@ export function ResultsView({
     <div className="flex-1 flex flex-col overflow-hidden bg-[#FAFBFC]">
       {/* Results header */}
       <div className="bg-white border-b border-gray-200 px-7 py-5 flex items-center gap-4 flex-shrink-0">
-        <span className="text-[22px] font-bold text-[#1A73E8]">{displayCount}</span>
+        <span className="text-[28px] font-serif text-[#1A73E8]">{displayCount}</span>
         <span className="text-sm text-gray-500">prospects available</span>
         <span className="text-xs text-gray-300 bg-gray-50 px-2.5 py-1 rounded-full">
           {(responseTimeMs / 1000).toFixed(2)}s
