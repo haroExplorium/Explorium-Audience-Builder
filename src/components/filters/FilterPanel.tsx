@@ -51,7 +51,7 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
         </span>
         {activeCount > 0 && (
           <div className="flex items-center gap-2 ml-3 flex-shrink-0">
-            <span className="bg-[#1A73E8] text-white text-[11px] font-semibold px-2 py-0.5 rounded-full">
+            <span className="bg-[#0B2B3C] text-white text-[11px] font-semibold px-2 py-0.5 rounded-full">
               {activeCount} active
             </span>
             <button
@@ -101,8 +101,8 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
                 }}
                 className={`px-3 py-1 border rounded-full text-xs cursor-pointer transition-all
                   ${(filters.country ?? []).includes(opt.value)
-                    ? "bg-[#E3F2FD] border-[#1A73E8] text-[#1A73E8] font-medium"
-                    : "bg-white border-gray-200 text-gray-600 hover:border-[#1A73E8] hover:text-[#1A73E8]"
+                    ? "bg-[#E6F7F0] border-[#0B2B3C] text-[#0B2B3C] font-medium"
+                    : "bg-white border-gray-200 text-gray-600 hover:border-[#0B2B3C] hover:text-[#0B2B3C]"
                   }`}
               >
                 {opt.label}
@@ -229,7 +229,7 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
               type="checkbox"
               checked={!!filters[key]}
               onChange={(e) => setFilters({ [key]: e.target.checked })}
-              className="w-4 h-4 accent-[#1A73E8]"
+              className="w-4 h-4 accent-[#0B2B3C]"
             />
             {label}
           </label>
@@ -243,8 +243,8 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
           className={`w-full py-2.5 rounded-lg text-sm font-semibold text-white transition-all
             ${
               activeCount === 0
-                ? "bg-[#1A73E8] opacity-40 cursor-not-allowed"
-                : "bg-[#1A73E8] hover:bg-[#1565C0] shadow-[0_2px_8px_rgba(26,115,232,0.3)]"
+                ? "bg-[#0B2B3C] opacity-40 cursor-not-allowed"
+                : "bg-[#0B2B3C] hover:bg-[#0A2230] shadow-[0_2px_8px_rgba(11,43,60,0.3)]"
             }`}
         >
           {isLoading ? "Generating..." : "Generate Audience"}

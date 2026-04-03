@@ -15,7 +15,7 @@ export function NavRail() {
   return (
     <nav className="fixed left-0 top-0 bottom-0 w-14 bg-white border-r border-gray-200 flex flex-col items-center pt-3 z-50">
       {/* Logo */}
-      <div className="w-9 h-9 bg-[#1A73E8] rounded-lg flex items-center justify-center text-white font-bold text-sm mb-5">
+      <div className="w-9 h-9 bg-[#0B2B3C] rounded-lg flex items-center justify-center text-white font-bold text-sm mb-5">
         E
       </div>
 
@@ -29,7 +29,7 @@ export function NavRail() {
         <div
           onClick={() => setSettingsOpen((v) => !v)}
           className={`relative group w-10 h-10 rounded-lg flex items-center justify-center mb-1 cursor-pointer transition-colors
-            ${settingsOpen ? "bg-[#E3F2FD] text-[#1A73E8]" : "text-gray-400 hover:bg-[#E3F2FD] hover:text-[#1A73E8]"}`}
+            ${settingsOpen ? "bg-[#E6F7F0] text-[#0B2B3C]" : "text-gray-400 hover:bg-[#E6F7F0] hover:text-[#0B2B3C]"}`}
         >
           <SettingsIcon />
           {!settingsOpen && (
@@ -89,7 +89,7 @@ function NavItem({
   return (
     <div
       className={`relative group w-10 h-10 rounded-lg flex items-center justify-center mb-1 cursor-pointer transition-colors
-        ${active ? "bg-[#E3F2FD] text-[#1A73E8]" : "text-gray-400 hover:bg-[#E3F2FD] hover:text-[#1A73E8]"}
+        ${active ? "bg-[#E6F7F0] text-[#0B2B3C]" : "text-gray-400 hover:bg-[#E6F7F0] hover:text-[#0B2B3C]"}
         ${className}`}
     >
       {icon}

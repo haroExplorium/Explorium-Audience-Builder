@@ -44,7 +44,7 @@ export default function SetupPage() {
         <div className="bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-gray-100 px-8 py-10">
           {/* Logo */}
           <div className="flex justify-center mb-6">
-            <div className="w-12 h-12 bg-[#1A73E8] rounded-xl flex items-center justify-center text-white font-bold text-xl">
+            <div className="w-12 h-12 bg-[#0B2B3C] rounded-xl flex items-center justify-center text-white font-bold text-xl">
               E
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function SetupPage() {
                   autoComplete="off"
                   spellCheck={false}
                   className="w-full px-4 py-3 pr-12 border border-gray-200 rounded-lg text-sm font-mono outline-none transition-all
-                    focus:border-[#1A73E8] focus:ring-2 focus:ring-[#1A73E8]/10
+                    focus:border-[#0B2B3C] focus:ring-2 focus:ring-[#0B2B3C]/10
                     placeholder:text-gray-300 placeholder:font-sans"
                 />
                 <button
@@ -98,9 +98,9 @@ export default function SetupPage() {
             <button
               type="submit"
               disabled={!apiKey.trim() || loading}
-              className="w-full bg-[#1A73E8] text-white py-3 rounded-lg text-sm font-semibold
-                hover:bg-[#1565C0] transition-colors
-                shadow-[0_2px_8px_rgba(26,115,232,0.3)]
+              className="w-full bg-[#0B2B3C] text-white py-3 rounded-lg text-sm font-semibold
+                hover:bg-[#0A2230] transition-colors
+                shadow-[0_2px_8px_rgba(11,43,60,0.3)]
                 disabled:opacity-40 disabled:cursor-not-allowed
                 flex items-center justify-center gap-2"
             >
@@ -122,7 +122,7 @@ export default function SetupPage() {
               href="https://app.explorium.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#1A73E8] hover:underline"
+              className="text-[#0B2B3C] hover:underline"
             >
               Explorium dashboard
             </a>

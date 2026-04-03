@@ -24,10 +24,10 @@ export function FilterSection({
         onClick={() => setOpen((v) => !v)}
         className="w-full flex items-center gap-3.5 px-6 py-3.5 hover:bg-gray-50 transition-colors text-left"
       >
-        <span className="text-[#1A73E8] w-5 h-5 flex-shrink-0">{icon}</span>
-        <span className="text-sm text-[#1A73E8] font-medium flex-1">{label}</span>
+        <span className="text-[#0B2B3C] w-5 h-5 flex-shrink-0">{icon}</span>
+        <span className="text-sm text-[#0B2B3C] font-medium flex-1">{label}</span>
         {activeCount ? (
-          <span className="text-[11px] text-[#1A73E8] bg-[#E3F2FD] px-2 py-0.5 rounded-full font-semibold">
+          <span className="text-[11px] text-[#0B2B3C] bg-[#E6F7F0] px-2 py-0.5 rounded-full font-semibold">
             {activeCount}
           </span>
         ) : null}
@@ -39,7 +39,7 @@ export function FilterSection({
           {appliedTags.map((t) => (
             <span
               key={t.label}
-              className="inline-flex items-center gap-1 bg-[#E3F2FD] text-[#1A73E8] text-[11px] font-medium px-2 py-0.5 rounded"
+              className="inline-flex items-center gap-1 bg-[#E6F7F0] text-[#0B2B3C] text-[11px] font-medium px-2 py-0.5 rounded"
             >
               {t.label}
               <button

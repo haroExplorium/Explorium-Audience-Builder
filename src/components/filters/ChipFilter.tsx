@@ -29,8 +29,8 @@ export function ChipFilter({ options, selected, onChange }: ChipFilterProps) {
           className={`px-3 py-1 border rounded-full text-xs cursor-pointer transition-all
             ${
               selected.includes(opt.value)
-                ? "bg-[#E3F2FD] border-[#1A73E8] text-[#1A73E8] font-medium"
-                : "bg-white border-gray-200 text-gray-600 hover:border-[#1A73E8] hover:text-[#1A73E8]"
+                ? "bg-[#E6F7F0] border-[#0B2B3C] text-[#0B2B3C] font-medium"
+                : "bg-white border-gray-200 text-gray-600 hover:border-[#0B2B3C] hover:text-[#0B2B3C]"
             }`}
         >
           {opt.label}

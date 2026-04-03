@@ -59,7 +59,7 @@ function HomePageContent() {
         {loading && (
           <div className="flex-1 flex items-center justify-center bg-[#FAFBFC]">
             <div className="text-center">
-              <div className="w-8 h-8 border-2 border-[#1A73E8] border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+              <div className="w-8 h-8 border-2 border-[#0B2B3C] border-t-transparent rounded-full animate-spin mx-auto mb-3" />
               <p className="text-sm text-gray-500">Finding matching prospects...</p>
             </div>
           </div>

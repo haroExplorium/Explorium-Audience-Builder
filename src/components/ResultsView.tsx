@@ -54,7 +54,7 @@ export function ResultsView({
     <div className="flex-1 flex flex-col overflow-hidden bg-[#FAFBFC]">
       {/* Results header */}
       <div className="bg-white border-b border-gray-200 px-7 py-5 flex items-center gap-4 flex-shrink-0">
-        <span className="text-[28px] font-serif text-[#1A73E8]">{displayCount}</span>
+        <span className="text-[28px] font-serif text-[#0B2B3C]">{displayCount}</span>
         <span className="text-sm text-gray-500">prospects available</span>
         <span className="text-xs text-gray-300 bg-gray-50 px-2.5 py-1 rounded-full">
           {(responseTimeMs / 1000).toFixed(2)}s
@@ -63,7 +63,7 @@ export function ResultsView({
       </div>
 
       {/* Sample notice */}
-      <div className="bg-[#E3F2FD] px-7 py-2.5 flex items-center gap-2 text-sm text-[#1565C0] flex-shrink-0">
+      <div className="bg-[#E6F7F0] px-7 py-2.5 flex items-center gap-2 text-sm text-[#065F46] flex-shrink-0">
         <InfoIcon />
         Showing a{" "}
         <strong className="font-semibold">
@@ -95,19 +95,19 @@ export function ResultsView({
               const location = [p.city, p.region_name, p.country_name].filter(Boolean).join(", ");
               return (
                 <tr key={p.prospect_id ?? i} className="group">
-                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F8FBFF] font-semibold text-gray-900">
+                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] font-semibold text-gray-900">
                     {p.full_name}
                   </td>
-                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F8FBFF] text-gray-700">
+                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-700">
                     {p.job_title ?? "—"}
                   </td>
-                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F8FBFF] text-[#1A73E8] font-medium">
+                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-[#0B2B3C] font-medium">
                     {p.company_name ?? "—"}
                   </td>
-                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F8FBFF] text-gray-600">
+                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-600">
                     {p.job_department_main ?? "—"}
                   </td>
-                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F8FBFF]">
+                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4]">
                     {badge ? (
                       <span
                         className={`inline-block px-2.5 py-0.5 rounded text-[11px] font-semibold ${badge.bg} ${badge.text}`}
@@ -118,13 +118,13 @@ export function ResultsView({
                       "—"
                     )}
                   </td>
-                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F8FBFF] text-gray-600 text-xs">
+                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-600 text-xs">
                     {p.email || "—"}
                   </td>
-                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F8FBFF] text-gray-600 text-xs">
+                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-600 text-xs">
                     {p.phone || "—"}
                   </td>
-                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F8FBFF] text-gray-600">
+                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-600">
                     {location || "—"}
                   </td>
                 </tr>
@@ -135,7 +135,7 @@ export function ResultsView({
       </div>
 
       {/* Download bar */}
-      <div className="bg-white border-t-2 border-[#1A73E8] px-7 py-4 flex items-center gap-4 flex-shrink-0">
+      <div className="bg-white border-t-2 border-[#0B2B3C] px-7 py-4 flex items-center gap-4 flex-shrink-0">
         <div className="flex-1">
           <div className="text-sm font-semibold text-gray-900 flex items-center gap-2">
             Download
@@ -145,7 +145,7 @@ export function ResultsView({
               max={60000}
               value={downloadLimit}
               onChange={(e) => setDownloadLimit(Math.max(1, parseInt(e.target.value) || 1))}
-              className="w-20 px-2 py-1 border border-gray-200 rounded text-sm text-center font-semibold outline-none focus:border-[#1A73E8] focus:ring-1 focus:ring-[#1A73E8]/20"
+              className="w-20 px-2 py-1 border border-gray-200 rounded text-sm text-center font-semibold outline-none focus:border-[#0B2B3C] focus:ring-1 focus:ring-[#0B2B3C]/20"
             />
             of {displayCount} prospects
           </div>
@@ -156,7 +156,7 @@ export function ResultsView({
         <button
           onClick={handleDownload}
           disabled={downloading}
-          className="flex items-center gap-2 bg-[#1A73E8] text-white px-8 py-3 rounded-lg text-[15px] font-semibold hover:bg-[#1565C0] transition-colors shadow-[0_2px_8px_rgba(26,115,232,0.3)] hover:shadow-[0_4px_12px_rgba(26,115,232,0.4)] disabled:opacity-60"
+          className="flex items-center gap-2 bg-[#0B2B3C] text-white px-8 py-3 rounded-lg text-[15px] font-semibold hover:bg-[#0A2230] transition-colors shadow-[0_2px_8px_rgba(11,43,60,0.3)] hover:shadow-[0_4px_12px_rgba(11,43,60,0.4)] disabled:opacity-60"
         >
           <DownloadIcon />
           {downloading

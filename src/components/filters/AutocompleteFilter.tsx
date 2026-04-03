@@ -59,7 +59,7 @@ export function AutocompleteFilter({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm outline-none focus:border-[#1A73E8] focus:ring-2 focus:ring-[#1A73E8]/10 font-[inherit] placeholder:text-gray-300"
+          className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm outline-none focus:border-[#0B2B3C] focus:ring-2 focus:ring-[#0B2B3C]/10 font-[inherit] placeholder:text-gray-300"
           onBlur={() => setTimeout(() => setOpen(false), 150)}
         />
         {open && suggestions.length > 0 && (
@@ -68,7 +68,7 @@ export function AutocompleteFilter({
               <button
                 key={s.value}
                 onMouseDown={() => add(s)}
-                className="w-full text-left px-3 py-2 text-sm hover:bg-[#E3F2FD] hover:text-[#1A73E8]"
+                className="w-full text-left px-3 py-2 text-sm hover:bg-[#E6F7F0] hover:text-[#0B2B3C]"
               >
                 {s.label}
               </button>

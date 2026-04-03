@@ -56,7 +56,7 @@ function FloatingIcon({
 }) {
   return (
     <div
-      className={`absolute text-[#1A73E8] pointer-events-none select-none ${className}`}
+      className={`absolute text-[#0B2B3C] pointer-events-none select-none ${className}`}
       style={{
         opacity: 0.12,
         width: size,
@@ -75,7 +75,7 @@ function WorldMapSVG() {
     <svg
       viewBox="0 0 960 500"
       className="w-[85%] max-w-[900px] opacity-[0.06]"
-      fill="#1A73E8"
+      fill="#0B2B3C"
     >
       {dots.map((d, i) => (
         <circle key={i} cx={d.x} cy={d.y} r={2.5} />
