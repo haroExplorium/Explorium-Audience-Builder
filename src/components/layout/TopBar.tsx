@@ -5,9 +5,6 @@ export function TopBar() {
       <div className="w-px h-6 bg-gray-200 mx-4" />
       <span className="text-sm text-gray-500 font-medium">Audience Builder</span>
       <div className="flex-1" />
-      <div className="w-8 h-8 bg-[#E6F7F0] rounded-full flex items-center justify-center text-[13px] font-semibold text-[#0B2B3C]">
-        OH
-      </div>
     </div>
   );
 }
