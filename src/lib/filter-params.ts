@@ -3,6 +3,7 @@ import { createSearchParamsCache } from "nuqs/server";
 
 export const filterParamsParsers = {
   country: parseAsArrayOf(parseAsString).withDefault([]),
+  region: parseAsArrayOf(parseAsString).withDefault([]),
   industry: parseAsArrayOf(parseAsString).withDefault([]),
   revenue: parseAsArrayOf(parseAsString).withDefault([]),
   employees: parseAsArrayOf(parseAsString).withDefault([]),

@@ -21,6 +21,7 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
       filters.country,
       filters.industry,
       filters.revenue,
+      filters.region,
       filters.employees,
       filters.managementLevel,
       filters.jobTitle,
@@ -57,6 +58,7 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
             <button
               onClick={() => setFilters({
                 country: [],
+                region: [],
                 industry: [],
                 revenue: [],
                 employees: [],
@@ -114,6 +116,20 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
             placeholder="Search more countries..."
             selected={filters.country ?? []}
             onChange={(v) => setArr("country", v)}
+          />
+        </FilterSection>
+
+        <FilterSection
+          icon={<RegionIcon />}
+          label="Region / State"
+          activeCount={filters.region?.length || undefined}
+          appliedTags={tagsFor("region")}
+        >
+          <AutocompleteFilter
+            field="region_country_code"
+            placeholder="Search states or regions..."
+            selected={filters.region ?? []}
+            onChange={(v) => setArr("region", v)}
           />
         </FilterSection>
 
@@ -265,6 +281,9 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
 
 function LocationIcon() {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>;
+}
+function RegionIcon() {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M3 6l9 4 9-4"/><path d="M3 6v12l9 4 9-4V6"/><path d="M12 10v12"/></svg>;
 }
 function IndustryIcon() {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>;

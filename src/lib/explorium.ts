@@ -25,6 +25,9 @@ export function buildProspectFilters(filters: FilterState): Record<string, unkno
   if (hasValue(filters.country)) {
     body["country_code"] = { values: filters.country };
   }
+  if (hasValue(filters.region)) {
+    body["region_country_code"] = { values: filters.region };
+  }
   // Industry — {"values": [...]}
   if (hasValue(filters.industry)) {
     body["linkedin_category"] = { values: filters.industry };

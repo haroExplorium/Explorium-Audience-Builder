@@ -1,5 +1,6 @@
 export interface FilterState {
   country?: string[];
+  region?: string[];
   industry?: string[];
   revenue?: string[];
   employees?: string[];
