@@ -9,6 +9,7 @@ export const filterParamsParsers = {
   companyName: parseAsArrayOf(parseAsString).withDefault([]),
   managementLevel: parseAsArrayOf(parseAsString).withDefault([]),
   jobTitle: parseAsArrayOf(parseAsString).withDefault([]),
+  includeRelatedTitles: parseAsBoolean.withDefault(true),
   department: parseAsArrayOf(parseAsString).withDefault([]),
   hasEmail: parseAsBoolean.withDefault(false),
   hasPhone: parseAsBoolean.withDefault(false),

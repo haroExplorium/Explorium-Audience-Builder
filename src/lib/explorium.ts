@@ -44,7 +44,10 @@ export function buildProspectFilters(filters: FilterState): Record<string, unkno
     body["job_level"] = { values: filters.managementLevel };
   }
   if (hasValue(filters.jobTitle)) {
-    body["job_title"] = { values: filters.jobTitle };
+    body["job_title"] = {
+      values: filters.jobTitle,
+      include_related_job_titles: filters.includeRelatedTitles !== false,
+    };
   }
   if (hasValue(filters.department)) {
     body["job_department"] = { values: filters.department };

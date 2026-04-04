@@ -6,6 +6,7 @@ export interface FilterState {
   companyName?: string[];
   managementLevel?: string[];
   jobTitle?: string[];
+  includeRelatedTitles?: boolean;
   department?: string[];
   hasEmail?: boolean;
   hasPhone?: boolean;

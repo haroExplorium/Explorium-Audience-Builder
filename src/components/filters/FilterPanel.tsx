@@ -196,6 +196,15 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
             selected={filters.jobTitle ?? []}
             onChange={(v) => setArr("jobTitle", v)}
           />
+          <label className="flex items-center gap-2 mt-2 text-[12px] text-gray-500 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={filters.includeRelatedTitles !== false}
+              onChange={(e) => setFilters({ includeRelatedTitles: e.target.checked })}
+              className="w-3.5 h-3.5 accent-[#0B2B3C]"
+            />
+            Include related job titles
+          </label>
         </FilterSection>
 
         <FilterSection
