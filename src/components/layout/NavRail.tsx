@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export function NavRail() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   async function handleLogout() {
     await fetch("/api/key", { method: "DELETE" });
@@ -20,7 +21,18 @@ export function NavRail() {
       </div>
 
       {/* Primary nav */}
-      <NavItem icon={<UsersIcon />} label="Audience Builder" active />
+      <NavItem
+        icon={<UsersIcon />}
+        label="Audience Builder"
+        active={pathname === "/"}
+        onClick={() => router.push("/")}
+      />
+      <NavItem
+        icon={<BuildingIcon />}
+        label="Businesses"
+        active={pathname === "/businesses"}
+        onClick={() => router.push("/businesses")}
+      />
 
       <div className="flex-1" />
 
@@ -80,14 +92,17 @@ function NavItem({
   label,
   active,
   className = "",
+  onClick,
 }: {
   icon: React.ReactNode;
   label: string;
   active?: boolean;
   className?: string;
+  onClick?: () => void;
 }) {
   return (
     <div
+      onClick={onClick}
       className={`relative group w-10 h-10 rounded-lg flex items-center justify-center mb-1 cursor-pointer transition-colors
         ${active ? "bg-[#E6F7F0] text-[#0B2B3C]" : "text-gray-400 hover:bg-[#E6F7F0] hover:text-[#0B2B3C]"}
         ${className}`}
@@ -97,6 +112,16 @@ function NavItem({
         {label}
       </span>
     </div>
+  );
+}
+
+function BuildingIcon() {
+  return (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M3 9h18" />
+      <path d="M9 21V9" />
+    </svg>
   );
 }
 
