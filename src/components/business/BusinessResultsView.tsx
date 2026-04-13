@@ -72,7 +72,6 @@ export function BusinessResultsView({
               {[
                 "Company Name",
                 "Website",
-                "Google Category",
                 "NAICS Category",
                 "Size",
                 "Revenue",
@@ -115,9 +114,6 @@ export function BusinessResultsView({
                     ) : (
                       "—"
                     )}
-                  </td>
-                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-700">
-                    {b.google_category ?? "—"}
                   </td>
                   <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-700">
                     {b.naics_description ?? (b.naics ? String(b.naics) : "—")}
