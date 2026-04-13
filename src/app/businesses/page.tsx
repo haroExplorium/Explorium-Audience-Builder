@@ -74,6 +74,7 @@ export default function BusinessesPage() {
             businesses={results.businesses}
             totalCount={results.totalCount}
             responseTimeMs={results.responseTimeMs}
+            filters={filters}
           />
         )}
       </main>

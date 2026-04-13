@@ -1,18 +1,45 @@
 "use client";
-import { Business } from "@/types/business";
+import { useState } from "react";
+import { Business, BusinessFilterState } from "@/types/business";
 
 interface BusinessResultsViewProps {
   businesses: Business[];
   totalCount: number;
   responseTimeMs: number;
+  filters: BusinessFilterState;
 }
 
 export function BusinessResultsView({
   businesses,
   totalCount,
   responseTimeMs,
+  filters,
 }: BusinessResultsViewProps) {
+  const [downloading, setDownloading] = useState(false);
+  const [downloadLimit, setDownloadLimit] = useState(1000);
   const displayCount = totalCount.toLocaleString();
+  const effectiveLimit = Math.min(downloadLimit, totalCount);
+  const capped = totalCount > downloadLimit;
+
+  async function handleDownload() {
+    setDownloading(true);
+    try {
+      const res = await fetch("/api/businesses/download", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ filters, limit: downloadLimit }),
+      });
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "explorium-businesses.csv";
+      a.click();
+      URL.revokeObjectURL(url);
+    } finally {
+      setDownloading(false);
+    }
+  }
 
   return (
     <div className="flex-1 flex flex-col overflow-hidden bg-[#FAFBFC]">
@@ -110,7 +137,54 @@ export function BusinessResultsView({
           </tbody>
         </table>
       </div>
+
+      {/* Download bar */}
+      <div className="bg-white border-t-2 border-[#0B2B3C] px-7 py-4 flex items-center gap-4 flex-shrink-0">
+        <div className="flex-1">
+          <div className="text-sm font-semibold text-gray-900 flex items-center gap-2">
+            Download
+            <input
+              type="number"
+              min={1}
+              max={60000}
+              value={downloadLimit}
+              onChange={(e) => setDownloadLimit(Math.max(1, parseInt(e.target.value) || 1))}
+              className="w-20 px-2 py-1 border border-gray-200 rounded text-sm text-center font-semibold outline-none focus:border-[#0B2B3C] focus:ring-1 focus:ring-[#0B2B3C]/20"
+            />
+            of {displayCount} businesses
+          </div>
+          <div className="text-xs text-gray-400 mt-0.5">
+            Full dataset: name, domain, category, NAICS, size, revenue, location, LinkedIn, description
+          </div>
+        </div>
+        <button
+          onClick={handleDownload}
+          disabled={downloading}
+          className="flex items-center gap-2 bg-[#0B2B3C] text-white px-8 py-3 rounded-lg text-[15px] font-semibold hover:bg-[#0A2230] transition-colors shadow-[0_2px_8px_rgba(11,43,60,0.3)] hover:shadow-[0_4px_12px_rgba(11,43,60,0.4)] disabled:opacity-60"
+        >
+          <DownloadIcon />
+          {downloading
+            ? "Downloading..."
+            : `Download CSV (${effectiveLimit.toLocaleString()} records)`}
+        </button>
+      </div>
     </div>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg
+      className="w-4 h-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+      <polyline points="7,10 12,15 17,10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
   );
 }
 
