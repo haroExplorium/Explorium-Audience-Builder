@@ -8,6 +8,7 @@ export const filterParamsParsers = {
   revenue: parseAsArrayOf(parseAsString).withDefault([]),
   employees: parseAsArrayOf(parseAsString).withDefault([]),
   companyName: parseAsArrayOf(parseAsString).withDefault([]),
+  businessId: parseAsArrayOf(parseAsString).withDefault([]),
   managementLevel: parseAsArrayOf(parseAsString).withDefault([]),
   jobTitle: parseAsArrayOf(parseAsString).withDefault([]),
   includeRelatedTitles: parseAsBoolean.withDefault(true),

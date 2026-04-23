@@ -42,6 +42,9 @@ export function buildProspectFilters(filters: FilterState): Record<string, unkno
   if (hasValue(filters.companyName)) {
     body["company_name"] = { values: filters.companyName };
   }
+  if (hasValue(filters.businessId)) {
+    body["business_id"] = { values: filters.businessId };
+  }
   // Professional filters — {"values": [...]}
   if (hasValue(filters.managementLevel)) {
     body["job_level"] = { values: filters.managementLevel };

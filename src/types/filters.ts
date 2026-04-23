@@ -5,6 +5,7 @@ export interface FilterState {
   revenue?: string[];
   employees?: string[];
   companyName?: string[];
+  businessId?: string[];
   managementLevel?: string[];
   jobTitle?: string[];
   includeRelatedTitles?: boolean;

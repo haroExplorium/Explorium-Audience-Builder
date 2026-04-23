@@ -27,6 +27,7 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
       filters.jobTitle,
       filters.department,
       filters.companyName,
+      filters.businessId,
     ].filter((v) => Array.isArray(v) && v.length > 0).length +
     (filters.hasEmail ? 1 : 0) +
     (filters.hasPhone ? 1 : 0);
@@ -63,6 +64,7 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
                 revenue: [],
                 employees: [],
                 companyName: [],
+                businessId: [],
                 managementLevel: [],
                 jobTitle: [],
                 department: [],
@@ -188,6 +190,33 @@ export function FilterPanel({ onGenerate, isLoading }: FilterPanelProps) {
         </FilterSection>
 
         <FilterSection
+          icon={<IdIcon />}
+          label="Business ID"
+          activeCount={filters.businessId?.length || undefined}
+          appliedTags={tagsFor("businessId")}
+        >
+          <div className="flex gap-1.5">
+            <input
+              type="text"
+              placeholder="Paste a business ID..."
+              className="flex-1 px-3 py-2 border border-gray-200 rounded-md text-sm outline-none focus:border-[#0B2B3C] focus:ring-2 focus:ring-[#0B2B3C]/10 font-mono placeholder:font-sans placeholder:text-gray-300"
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  const val = (e.target as HTMLInputElement).value.trim();
+                  if (val && !(filters.businessId ?? []).includes(val)) {
+                    setArr("businessId", [...(filters.businessId ?? []), val]);
+                  }
+                  (e.target as HTMLInputElement).value = "";
+                }
+              }}
+            />
+          </div>
+          <p className="text-[11px] text-gray-400 mt-1.5">
+            Press Enter to add. Get IDs from the Business search tab.
+          </p>
+        </FilterSection>
+
+        <FilterSection
           icon={<LevelIcon />}
           label="Management level"
           activeCount={filters.managementLevel?.length || undefined}
@@ -296,6 +325,9 @@ function EmployeesIcon() {
 }
 function KeywordIcon() {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>;
+}
+function IdIcon() {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="6" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="14" y2="12"/><line x1="6" y1="16" x2="10" y2="16"/></svg>;
 }
 function BuildingIcon() {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h6M3 15h6"/></svg>;

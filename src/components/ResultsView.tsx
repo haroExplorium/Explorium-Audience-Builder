@@ -77,7 +77,7 @@ export function ResultsView({
         <table className="w-full border-collapse text-[13px] min-w-[900px]">
           <thead className="sticky top-0 z-10">
             <tr>
-              {["Full Name", "Job Title", "Company", "Department", "Level", "Email", "Phone", "Location"].map(
+              {["Full Name", "Job Title", "Company", "Business ID", "Department", "Level", "Email", "Phone", "Location"].map(
                 (h) => (
                   <th
                     key={h}
@@ -103,6 +103,9 @@ export function ResultsView({
                   </td>
                   <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-[#0B2B3C] font-medium">
                     {p.company_name ?? "—"}
+                  </td>
+                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-500 text-xs font-mono">
+                    {p.business_id ?? "—"}
                   </td>
                   <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-600">
                     {p.job_department_main ?? "—"}
