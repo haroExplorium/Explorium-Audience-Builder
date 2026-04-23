@@ -17,6 +17,8 @@ export default function BusinessesPage() {
     country: [],
     googleCategory: [],
     naicsCategory: [],
+    employees: [],
+    revenue: [],
   });
   const [results, setResults] = useState<Results | null>(null);
   const [loading, setLoading] = useState(false);

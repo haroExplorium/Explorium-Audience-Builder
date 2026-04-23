@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
 import { FilterSection } from "../filters/FilterSection";
+import { ChipFilter } from "../filters/ChipFilter";
 import { BusinessAutocompleteFilter } from "./BusinessAutocompleteFilter";
 import { BusinessFilterState } from "@/types/business";
+import { EMPLOYEE_RANGES, REVENUE_RANGES } from "@/types/filters";
 
 interface BusinessFilterPanelProps {
   onGenerate: () => void;
@@ -21,7 +23,7 @@ export function BusinessFilterPanel({
   const hasNaics = (filters.naicsCategory?.length ?? 0) > 0;
 
   const activeCount =
-    [filters.country, filters.googleCategory, filters.naicsCategory].filter(
+    [filters.country, filters.googleCategory, filters.naicsCategory, filters.employees, filters.revenue].filter(
       (v) => Array.isArray(v) && v.length > 0
     ).length;
 
@@ -48,7 +50,7 @@ export function BusinessFilterPanel({
             </span>
             <button
               onClick={() =>
-                setFilters({ country: [], googleCategory: [], naicsCategory: [] })
+                setFilters({ country: [], googleCategory: [], naicsCategory: [], employees: [], revenue: [] })
               }
               className="text-[11px] text-gray-400 hover:text-red-500 font-medium transition-colors"
             >
@@ -140,6 +142,32 @@ export function BusinessFilterPanel({
             disabled={hasGoogle}
           />
         </FilterSection>
+
+        <FilterSection
+          icon={<EmployeesIcon />}
+          label="Number of employees"
+          activeCount={filters.employees?.length || undefined}
+          appliedTags={tagsFor("employees")}
+        >
+          <ChipFilter
+            options={EMPLOYEE_RANGES}
+            selected={filters.employees ?? []}
+            onChange={(v) => setFilters({ ...filters, employees: v })}
+          />
+        </FilterSection>
+
+        <FilterSection
+          icon={<RevenueIcon />}
+          label="Revenue"
+          activeCount={filters.revenue?.length || undefined}
+          appliedTags={tagsFor("revenue")}
+        >
+          <ChipFilter
+            options={REVENUE_RANGES}
+            selected={filters.revenue ?? []}
+            onChange={(v) => setFilters({ ...filters, revenue: v })}
+          />
+        </FilterSection>
       </div>
 
       <div className="px-6 pb-6 flex-shrink-0">
@@ -184,6 +212,23 @@ function NaicsIcon() {
       <path d="M4 7V4h16v3" />
       <path d="M9 20h6" />
       <path d="M12 4v16" />
+    </svg>
+  );
+}
+function EmployeesIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+    </svg>
+  );
+}
+function RevenueIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+      <line x1="12" y1="1" x2="12" y2="23" />
+      <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
     </svg>
   );
 }

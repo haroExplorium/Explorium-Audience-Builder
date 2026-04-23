@@ -23,6 +23,8 @@ export interface BusinessFilterState {
   country?: string[];
   googleCategory?: string[];
   naicsCategory?: string[];
+  employees?: string[];
+  revenue?: string[];
 }
 
 export interface BusinessApiResponse {

@@ -70,6 +70,7 @@ export function BusinessResultsView({
           <thead className="sticky top-0 z-10">
             <tr>
               {[
+                "Business ID",
                 "Company Name",
                 "Website",
                 "NAICS Category",
@@ -94,6 +95,9 @@ export function BusinessResultsView({
               const domain = b.domain || b.website;
               return (
                 <tr key={b.business_id ?? i} className="group">
+                  <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-500 text-xs font-mono">
+                    {b.business_id ?? "—"}
+                  </td>
                   <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] font-semibold text-gray-900">
                     {b.name ?? "—"}
                   </td>

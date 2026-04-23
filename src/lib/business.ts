@@ -23,6 +23,12 @@ export function buildBusinessFilters(filters: BusinessFilterState): Record<strin
   } else if (hasValue(filters.naicsCategory)) {
     body["naics_category"] = { values: filters.naicsCategory };
   }
+  if (hasValue(filters.employees)) {
+    body["company_size"] = { values: filters.employees };
+  }
+  if (hasValue(filters.revenue)) {
+    body["company_revenue"] = { values: filters.revenue };
+  }
 
   return body;
 }
