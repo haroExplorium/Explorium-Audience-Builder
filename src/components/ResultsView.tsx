@@ -105,7 +105,14 @@ export function ResultsView({
                     {p.company_name ?? "—"}
                   </td>
                   <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-500 text-xs font-mono">
-                    {p.business_id ?? "—"}
+                    <span className="inline-flex items-center gap-1">
+                      {p.business_id ? (
+                        <>
+                          {p.business_id.slice(0, 8)}...
+                          <CopyButton value={p.business_id} />
+                        </>
+                      ) : "—"}
+                    </span>
                   </td>
                   <td className="px-4 py-3.5 border-b border-gray-50 bg-white group-hover:bg-[#F0FDF4] text-gray-600">
                     {p.job_department_main ?? "—"}
@@ -168,6 +175,32 @@ export function ResultsView({
         </button>
       </div>
     </div>
+  );
+}
+
+function CopyButton({ value }: { value: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      onClick={() => {
+        navigator.clipboard.writeText(value);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      }}
+      title="Copy Business ID"
+      className="text-gray-300 hover:text-[#0B2B3C] transition-colors flex-shrink-0"
+    >
+      {copied ? (
+        <svg className="w-3.5 h-3.5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+          <polyline points="20,6 9,17 4,12" />
+        </svg>
+      ) : (
+        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+          <rect x="9" y="9" width="13" height="13" rx="2" />
+          <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+        </svg>
+      )}
+    </button>
   );
 }
 
