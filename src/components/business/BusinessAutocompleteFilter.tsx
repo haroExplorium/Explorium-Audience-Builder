@@ -14,6 +14,8 @@ interface BusinessAutocompleteFilterProps {
   disabled?: boolean;
 }
 
+const cache = new Map<string, Suggestion[]>();
+
 export function BusinessAutocompleteFilter({
   field,
   placeholder,
@@ -24,23 +26,52 @@ export function BusinessAutocompleteFilter({
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const abortRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
     clearTimeout(timer.current);
     if (query.length < 1 || disabled) {
       setSuggestions([]);
+      setLoading(false);
       return;
     }
-    timer.current = setTimeout(async () => {
-      const res = await fetch(
-        `/api/businesses/autocomplete?field=${field}&query=${encodeURIComponent(query)}`
-      );
-      const data = await res.json();
-      setSuggestions(data.results ?? []);
+
+    const cacheKey = `biz:${field}:${query}`;
+    const cached = cache.get(cacheKey);
+    if (cached) {
+      setSuggestions(cached);
       setOpen(true);
-    }, 300);
-    return () => clearTimeout(timer.current);
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+    timer.current = setTimeout(async () => {
+      abortRef.current?.abort();
+      const controller = new AbortController();
+      abortRef.current = controller;
+      try {
+        const res = await fetch(
+          `/api/businesses/autocomplete?field=${field}&query=${encodeURIComponent(query)}`,
+          { signal: controller.signal }
+        );
+        const data = await res.json();
+        const results = data.results ?? [];
+        cache.set(cacheKey, results);
+        setSuggestions(results);
+        setOpen(true);
+      } catch {
+        // aborted or network error
+      } finally {
+        setLoading(false);
+      }
+    }, 150);
+    return () => {
+      clearTimeout(timer.current);
+      abortRef.current?.abort();
+    };
   }, [query, field, disabled]);
 
   const add = (suggestion: Suggestion) => {
@@ -65,6 +96,11 @@ export function BusinessAutocompleteFilter({
           }`}
           onBlur={() => setTimeout(() => setOpen(false), 150)}
         />
+        {loading && query.length > 0 && !disabled && (
+          <div className="absolute right-2.5 top-1/2 -translate-y-1/2">
+            <div className="w-3.5 h-3.5 border-2 border-gray-300 border-t-[#0B2B3C] rounded-full animate-spin" />
+          </div>
+        )}
         {open && suggestions.length > 0 && (
           <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-md max-h-48 overflow-y-auto">
             {suggestions.map((s) => (
