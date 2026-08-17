@@ -445,7 +445,7 @@ rank,ticker,company_name,company_url,sector,exchange,location,index_weight_pct,a
 444,LBTYK,LIBERTY GLOBAL LTD CLASS C,https://www.libertyglobal.com,Communication,NASDAQ,United States,0.00,Both
 445,REYN,REYNOLDS CONSUMER PRODUCTS INC,https://reynoldsconsumerproducts.com,Consumer Staples,NASDAQ,United States,0.00,B2C
 446,BFA,BROWN FORMAN CLASS A,https://brown-forman.com,Consumer Staples,NYSE,United States,0.00,B2C
-447,JAN,JANUS LIVING INC CLASS A,,Real Estate,NYSE,United States,0.00,B2C
+447,JAN,JANUS LIVING INC CLASS A,https://janusreit.com,Real Estate,NYSE,United States,0.00,B2C
 448,COLM,COLUMBIA SPORTSWEAR,https://columbia.com,Consumer Discretionary,NASDAQ,United States,0.00,B2C
 449,PPC,PILGRIMS PRIDE CORP,https://pilgrims.com,Consumer Staples,NASDAQ,United States,0.00,Both
 450,TFSL,TFS FINANCIAL CORP,https://thirdfederal.com,Financials,NASDAQ,United States,0.00,Both

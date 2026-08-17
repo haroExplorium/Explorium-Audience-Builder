@@ -34,8 +34,8 @@ holdings file is the standard public proxy for it.
   constituents.
 - `sector` is passed through verbatim from the source. One row (DELL) is reported
   upstream as `Other`.
-- `company_url` is present for 1,014 of 1,021 companies (454 of 455 in the
-  consumer-facing file). See "Company URLs" below.
+- `company_url` is present for 1,015 of 1,021 companies, and for all 455 in the
+  consumer-facing file. See "Company URLs" below.
 
 ### Regenerating
 
@@ -188,7 +188,7 @@ python3 scripts/merge_contacts.py <dir-of-round-csvs> data/company-business-ids.
 which reads `company-domains.csv` (the hand-verified domains used to pin Explorium
 company matching) and `company-domains-extra.csv` (the remaining constituents).
 
-**Coverage: 1,014 of 1,021 companies**, and 454 of the 455 consumer-facing ones.
+**Coverage: 1,015 of 1,021 companies — and all 455 consumer-facing ones.**
 
 ### How the domains were established
 
@@ -206,11 +206,12 @@ company matching) and `company-domains-extra.csv` (the remaining constituents).
   secondary class inherits from its sibling (GOOG from GOOGL, FOX from FOXA, and so
   on).
 
-### The 7 without a URL
+### The 6 without a URL
 
 `P` (Everpure), `Q` (Qnity Electronics), `MBGL` (Mobility Global), `KRMN` (Karman
-Holdings), `MFP` (Midera Food Processing), `JAN` (Janus Living) and `FRMI` (Fermi).
-All are recent listings or spin-offs whose corporate site could not be confirmed;
+Holdings), `MFP` (Midera Food Processing) and `FRMI` (Fermi). All are B2B-only, so
+none of them affect the consumer-facing file. All are recent listings or spin-offs
+whose corporate site could not be confirmed;
 Explorium matched "Everpure" to a restaurant business and "Qnity Electronics" to an
 unrelated beauty-education firm. Left blank deliberately — a wrong URL is worse than
 an empty cell.
