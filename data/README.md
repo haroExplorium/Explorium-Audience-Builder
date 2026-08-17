@@ -1,8 +1,8 @@
 # Reference data
 
-## `russell-2000-companies.csv`
+## `russell-1000-companies.csv`
 
-Every company in the Russell 2000, one row per company.
+Every company in the Russell 1000, one row per company.
 
 | Column | Description |
 | --- | --- |
@@ -14,28 +14,100 @@ Every company in the Russell 2000, one row per company.
 | `location` | Country of domicile |
 | `index_weight_pct` | Weight in the index, percent |
 
-**Source:** the daily holdings file for the iShares Russell 2000 ETF (IWM),
-`https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/latest-holdings.csv`.
-FTSE Russell does not publish the constituent list for free, so the IWM holdings
-file is the standard public proxy for it.
+**Source:** the daily holdings file for the iShares Russell 1000 ETF (IWB),
+`https://www.ishares.com/us/products/239707/ishares-russell-1000-etf/latest-holdings.csv`.
+FTSE Russell does not publish the constituent list for free, so the matching iShares
+holdings file is the standard public proxy for it.
 
-**Snapshot:** holdings as of Aug 13, 2026 — 1,956 companies.
+**Snapshot:** holdings as of Aug 13, 2026 — 1,021 companies.
 
 ### Caveats
 
-- The index is named for 2,000 companies but rarely holds exactly that many.
+- The index is named for 1,000 companies but rarely holds exactly that many.
   Membership drifts between the annual June reconstitution and quarterly IPO
-  additions as constituents are acquired or delisted.
+  additions as constituents are acquired or delisted. Companies with multiple share
+  classes (Alphabet, Fox, Liberty entities) appear once per listed class.
 - Cash, money market, collateral and futures lines from the fund are excluded, as
   are zero-weight residual positions from completed acquisitions (contingent value
   rights, escrow entries, unlisted vesting tranches). They are fund artifacts, not
   constituents.
-- Weights sum to ~99.6%; the remainder is the fund's cash and futures overlay.
+- `sector` is passed through verbatim from the source. One row (DELL) is reported
+  upstream as `Other`.
 
 ### Regenerating
 
 ```bash
-python3 scripts/fetch_russell_2000.py
+python3 scripts/fetch_russell.py 1000   # or 2000 for the Russell 2000
 ```
 
 Rerun after the June reconstitution, or any time a current snapshot is needed.
+
+---
+
+## `russell-1000-classified.csv`
+
+All 1,021 companies with an added `audience_type` column: `B2C`, `B2B` or `Both`.
+
+## `russell-1000-consumer-facing.csv`
+
+The 455 companies whose `audience_type` is `B2C` or `Both` — B2B-only companies
+filtered out. `rank` is renumbered 1..455; every other column matches the classified
+file.
+
+### Method
+
+Classification is by **end market** — who ultimately buys the product:
+
+| Value | Meaning |
+| --- | --- |
+| `B2C` | Sells to individual consumers |
+| `B2B` | Sells only to businesses, institutions or governments |
+| `Both` | Meaningful revenue from consumers and from businesses |
+
+Every company inherits a default posture from its sector, and companies that break
+from that default are listed explicitly as overrides in
+`scripts/classify_b2c.py`. This guarantees full coverage — no company can be missed —
+and keeps every non-obvious judgement visible and reviewable in one place.
+
+Judgement calls worth knowing about:
+
+- A consumer-brand manufacturer that reaches shoppers through retailers or dealers
+  counts as consumer-facing (Whirlpool, Mattel, Thor). A component maker selling into
+  someone else's finished product does not (Aptiv, Lear, BorgWarner, Gentex).
+- REITs are classified by who occupies the property. Apartments, self-storage,
+  manufactured housing and hotels serve consumers; office, industrial, net-lease and
+  healthcare-facility REITs serve businesses.
+- Retail and regional banks are consumer-facing, per the brief. Market
+  infrastructure, ratings agencies, alternative asset managers, custody banks,
+  reinsurers and commercial insurance brokers are not.
+- Regulated utilities are `Both` — they bill households and businesses. Merchant
+  generators and yieldcos selling only wholesale power are `B2B`.
+- Integrated oil majors and refiners with branded consumer fuel retail are `Both`;
+  pure exploration and production is `B2B`.
+- Pharmaceutical and medtech manufacturers are `B2B` (they sell to providers, payers
+  and distributors) even where they advertise to patients. Health plans, care
+  delivery and patient-purchased devices are `Both`.
+
+### Distribution
+
+| Sector | B2C | Both | B2B |
+| --- | ---: | ---: | ---: |
+| Communication | 7 | 36 | 5 |
+| Consumer Discretionary | 95 | 14 | 6 |
+| Consumer Staples | 43 | 6 | 8 |
+| Energy | 0 | 6 | 29 |
+| Financials | 14 | 88 | 57 |
+| Health Care | 0 | 25 | 79 |
+| Industrials | 3 | 34 | 158 |
+| Information Technology | 1 | 19 | 130 |
+| Materials | 1 | 4 | 48 |
+| Real Estate | 15 | 6 | 42 |
+| Utilities | 0 | 37 | 4 |
+| Other | 0 | 1 | 0 |
+| **Total** | **179** | **276** | **566** |
+
+### Regenerating
+
+```bash
+python3 scripts/classify_b2c.py
+```

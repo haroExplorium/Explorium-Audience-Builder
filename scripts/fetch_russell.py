@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
-"""Regenerate data/russell-2000-companies.csv from the iShares Russell 2000 ETF (IWM)
-holdings file, which BlackRock publishes daily and is the standard public proxy for
-the Russell 2000 constituent list.
+"""Regenerate the Russell constituent lists from the matching iShares ETF holdings
+file, which BlackRock publishes daily and is the standard public proxy for the
+FTSE Russell constituent lists (Russell does not publish them for free).
 
-Usage: python3 scripts/fetch_russell_2000.py
+Usage:
+    python3 scripts/fetch_russell.py 1000    # -> data/russell-1000-companies.csv
+    python3 scripts/fetch_russell.py 2000    # -> data/russell-2000-companies.csv
 """
+import sys
 import csv
 import io
 import pathlib
 import urllib.request
 
-SOURCE = (
-    "https://www.ishares.com/us/products/239710/"
-    "ishares-russell-2000-etf/latest-holdings.csv"
-)
-OUT = pathlib.Path(__file__).resolve().parents[1] / "data" / "russell-2000-companies.csv"
+INDEXES = {
+    "1000": ("239707", "ishares-russell-1000-etf"),
+    "2000": ("239710", "ishares-russell-2000-etf"),
+}
+DATA_DIR = pathlib.Path(__file__).resolve().parents[1] / "data"
 COLUMNS = ["rank", "ticker", "company_name", "sector", "exchange", "location", "index_weight_pct"]
 
 
@@ -35,13 +38,13 @@ def is_stub(ticker: str, name: str, exchange: str) -> bool:
     )
 
 
-def download() -> str:
+def download(url: str) -> str:
     req = urllib.request.Request(
-        SOURCE,
+        url,
         headers={
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36",
-            "Referer": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+            "Referer": url.rsplit("/", 1)[0],
         },
     )
     with urllib.request.urlopen(req, timeout=120) as resp:
@@ -81,13 +84,20 @@ def parse(raw: str):
 
 
 def main() -> None:
-    as_of, holdings = parse(download())
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    with OUT.open("w", newline="") as fh:
+    index = sys.argv[1] if len(sys.argv) > 1 else "1000"
+    if index not in INDEXES:
+        sys.exit(f"Unknown index {index!r}; choose one of {', '.join(INDEXES)}")
+    product_id, slug = INDEXES[index]
+    url = f"https://www.ishares.com/us/products/{product_id}/{slug}/latest-holdings.csv"
+
+    as_of, holdings = parse(download(url))
+    out = DATA_DIR / f"russell-{index}-companies.csv"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("w", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=COLUMNS)
         writer.writeheader()
         writer.writerows(holdings)
-    print(f"Wrote {len(holdings)} companies to {OUT} (holdings as of {as_of})")
+    print(f"Wrote {len(holdings)} companies to {out} (holdings as of {as_of})")
 
 
 if __name__ == "__main__":

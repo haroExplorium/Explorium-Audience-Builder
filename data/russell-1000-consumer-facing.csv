@@ -1,0 +1,456 @@
+rank,ticker,company_name,sector,exchange,location,index_weight_pct,audience_type
+1,NVDA,NVIDIA CORP,Information Technology,NASDAQ,United States,7.29,Both
+2,AAPL,APPLE INC,Information Technology,NASDAQ,United States,6.12,Both
+3,MSFT,MICROSOFT,Information Technology,NASDAQ,United States,5.12,Both
+4,AMZN,AMAZON.COM INC,Consumer Discretionary,NASDAQ,United States,3.57,B2C
+5,GOOGL,ALPHABET CLASS A,Communication,NASDAQ,United States,2.80,Both
+6,GOOG,ALPHABET CLASS C,Communication,NASDAQ,United States,2.27,Both
+7,META,META PLATFORMS CLASS A,Communication,NASDAQ,United States,1.81,Both
+8,MU,MICRON TECHNOLOGY,Information Technology,NASDAQ,United States,1.48,Both
+9,TSLA,TESLA INC,Consumer Discretionary,NASDAQ,United States,1.38,B2C
+10,JPM,JPMORGAN CHASE & CO,Financials,NYSE,United States,1.35,Both
+11,BRKB,BERKSHIRE HATHAWAY INC CLASS B,Financials,NYSE,United States,1.31,Both
+12,AMD,ADVANCED MICRO DEVICES,Information Technology,NASDAQ,United States,1.09,Both
+13,XOM,EXXONMOBIL HOLDINGS CORP,Energy,NYSE,United States,0.92,Both
+14,V,VISA CLASS A,Financials,NYSE,United States,0.84,Both
+15,WMT,WALMART INC,Consumer Staples,NASDAQ,United States,0.70,B2C
+16,INTC,INTEL CORPORATION,Information Technology,NASDAQ,United States,0.66,Both
+17,MA,MASTERCARD CLASS A,Financials,NYSE,United States,0.64,Both
+18,COST,COSTCO WHOLESALE CORP,Consumer Staples,NASDAQ,United States,0.59,B2C
+19,BAC,BANK OF AMERICA CORP,Financials,NYSE,United States,0.59,Both
+20,CVX,CHEVRON CORP,Energy,NYSE,United States,0.51,Both
+21,UNH,UNITEDHEALTH GROUP INC,Health Care,NYSE,United States,0.50,Both
+22,HD,HOME DEPOT,Consumer Discretionary,NYSE,United States,0.47,B2C
+23,KO,COCA-COLA,Consumer Staples,NYSE,United States,0.47,B2C
+24,PG,PROCTER & GAMBLE,Consumer Staples,NYSE,United States,0.47,B2C
+25,NFLX,NETFLIX,Communication,NASDAQ,United States,0.46,B2C
+26,GS,GOLDMAN SACHS GROUP INC,Financials,NYSE,United States,0.42,Both
+27,PM,PHILIP MORRIS INTERNATIONAL INC,Consumer Staples,NYSE,United States,0.41,B2C
+28,WFC,WELLS FARGO,Financials,NYSE,United States,0.37,Both
+29,MS,MORGAN STANLEY,Financials,NYSE,United States,0.34,Both
+30,C,CITIGROUP INC,Financials,NYSE,United States,0.33,Both
+31,SNDK,SANDISK,Information Technology,NASDAQ,United States,0.31,Both
+32,VZ,VERIZON COMMUNICATIONS INC,Communication,NYSE,United States,0.28,Both
+33,MCD,MCDONALDS CORP,Consumer Discretionary,NYSE,United States,0.27,B2C
+34,PEP,PEPSICO INC,Consumer Staples,NASDAQ,United States,0.27,B2C
+35,DIS,WALT DISNEY,Communication,NYSE,United States,0.26,Both
+36,AXP,AMERICAN EXPRESS,Financials,NYSE,United States,0.25,Both
+37,BLK,BLACKROCK,Financials,NYSE,United States,0.25,Both
+38,SCHW,CHARLES SCHWAB,Financials,NYSE,United States,0.25,Both
+39,NEE,NEXTERA ENERGY,Utilities,NYSE,United States,0.25,Both
+40,TJX,TJX,Consumer Discretionary,NYSE,United States,0.24,B2C
+41,T,AT&T INC,Communication,NYSE,United States,0.23,Both
+42,WELL,WELLTOWER,Real Estate,NYSE,United States,0.23,Both
+43,BKNG,BOOKING HOLDINGS,Consumer Discretionary,NASDAQ,United States,0.23,B2C
+44,WDC,WESTERN DIGITAL CORP,Information Technology,NASDAQ,United States,0.23,Both
+45,DE,DEERE,Industrials,NYSE,United States,0.21,Both
+46,DELL,DELL TECHNOLOGIES INC CLASS C,Other,NYSE,United States,0.21,Both
+47,UBER,UBER TECHNOLOGIES,Industrials,NYSE,United States,0.21,Both
+48,COF,CAPITAL ONE FINANCIAL CORP,Financials,NYSE,United States,0.19,Both
+49,SBUX,STARBUCKS CORP,Consumer Discretionary,NASDAQ,United States,0.17,B2C
+50,LOW,LOWES COMPANIES INC,Consumer Discretionary,NYSE,United States,0.17,B2C
+51,CVS,CVS HEALTH,Health Care,NYSE,United States,0.17,Both
+52,PGR,PROGRESSIVE CORP,Financials,NYSE,United States,0.17,B2C
+53,CB,CHUBB,Financials,NYSE,United States,0.17,Both
+54,BX,BLACKSTONE,Financials,NYSE,United States,0.15,Both
+55,ADBE,ADOBE INC,Information Technology,NASDAQ,United States,0.15,Both
+56,MO,ALTRIA GROUP INC,Consumer Staples,NYSE,United States,0.15,B2C
+57,TT,TRANE TECHNOLOGIES PLC,Industrials,NYSE,United States,0.15,Both
+58,MPC,MARATHON PETROLEUM,Energy,NYSE,United States,0.15,Both
+59,SO,SOUTHERN,Utilities,NYSE,United States,0.14,Both
+60,PNC,PNC FINANCIAL SERVICES GROUP,Financials,NYSE,United States,0.14,Both
+61,VLO,VALERO ENERGY CORP,Energy,NYSE,United States,0.14,Both
+62,USB,US BANCORP,Financials,NYSE,United States,0.14,Both
+63,DUK,DUKE ENERGY CORP,Utilities,NYSE,United States,0.13,Both
+64,INTU,INTUIT,Information Technology,NASDAQ,United States,0.13,Both
+65,MMM,3M,Industrials,NYSE,United States,0.13,Both
+66,PSX,PHILLIPS 66,Energy,NYSE,United States,0.13,Both
+67,CMCSA,COMCAST CLASS A,Communication,NASDAQ,United States,0.13,Both
+68,TMUS,T MOBILE US INC,Communication,NASDAQ,United States,0.12,Both
+69,CEG,CONSTELLATION ENERGY CORP,Utilities,NASDAQ,United States,0.12,Both
+70,ELV,ELEVANCE HEALTH INC,Health Care,NYSE,United States,0.12,Both
+71,SHW,SHERWIN WILLIAMS,Materials,NYSE,United States,0.12,Both
+72,WM,WASTE MANAGEMENT INC,Industrials,NYSE,United States,0.12,Both
+73,MDLZ,MONDELEZ INTERNATIONAL INC CLASS A,Consumer Staples,NASDAQ,United States,0.11,B2C
+74,DASH,DOORDASH CLASS A,Consumer Discretionary,NASDAQ,United States,0.11,B2C
+75,SPOT,SPOTIFY TECHNOLOGY,Communication,NYSE,Sweden,0.11,Both
+76,UPS,UNITED PARCEL SERVICE INC CLASS B,Industrials,NYSE,United States,0.11,Both
+77,TRV,TRAVELERS COMPANIES,Financials,NYSE,United States,0.11,Both
+78,RCL,ROYAL CARIBBEAN GROUP,Consumer Discretionary,NYSE,United States,0.11,B2C
+79,GM,GENERAL MOTORS,Consumer Discretionary,NYSE,United States,0.11,B2C
+80,ROST,ROSS STORES INC,Consumer Discretionary,NASDAQ,United States,0.11,B2C
+81,MAR,MARRIOTT INTERNATIONAL CLASS A,Consumer Discretionary,NASDAQ,United States,0.11,B2C
+82,ORLY,OREILLY AUTOMOTIVE INC,Consumer Discretionary,NASDAQ,United States,0.11,Both
+83,ABNB,AIRBNB CLASS A,Consumer Discretionary,NASDAQ,United States,0.11,B2C
+84,HOOD,ROBINHOOD MARKETS CLASS A,Financials,NASDAQ,United States,0.11,B2C
+85,SPCX,SPACE EXPLORATION TECHNOLOGIES COR,Communication,NASDAQ,United States,0.10,Both
+86,FDX,FEDEX CORP,Industrials,NYSE,United States,0.10,Both
+87,CL,COLGATE-PALMOLIVE,Consumer Staples,NYSE,United States,0.10,B2C
+88,CI,CIGNA,Health Care,NYSE,United States,0.10,Both
+89,HLT,HILTON WORLDWIDE HOLDINGS INC,Consumer Discretionary,NYSE,United States,0.10,B2C
+90,TGT,TARGET CORP,Consumer Staples,NYSE,United States,0.10,B2C
+91,AEP,AMERICAN ELECTRIC POWER INC,Utilities,NASDAQ,United States,0.09,Both
+92,ALL,ALLSTATE CORP,Financials,NYSE,United States,0.09,B2C
+93,WBD,WARNER BROS. DISCOVERY SERIES A,Communication,NASDAQ,United States,0.09,Both
+94,TFC,TRUIST FINANCIAL,Financials,NYSE,United States,0.09,Both
+95,MNST,MONSTER BEVERAGE CORP,Consumer Staples,NASDAQ,United States,0.09,B2C
+96,AJG,ARTHUR J GALLAGHER,Financials,NYSE,United States,0.09,Both
+97,HCA,HCA HEALTHCARE INC,Health Care,NYSE,United States,0.09,Both
+98,D,DOMINION ENERGY INC,Utilities,NYSE,United States,0.08,Both
+99,DAL,DELTA AIR LINES,Industrials,NYSE,United States,0.08,Both
+100,SRE,SEMPRA,Utilities,NYSE,United States,0.08,Both
+101,PSA,PUBLIC STORAGE REIT,Real Estate,NYSE,United States,0.08,B2C
+102,AFL,AFLAC,Financials,NYSE,United States,0.08,Both
+103,F,FORD MOTOR CO,Consumer Discretionary,NYSE,United States,0.08,B2C
+104,PYPL,PAYPAL HOLDINGS INC,Financials,NASDAQ,United States,0.08,Both
+105,MET,METLIFE,Financials,NYSE,United States,0.07,Both
+106,FITB,FIFTH THIRD BANCORP,Financials,NYSE,United States,0.07,Both
+107,AMP,AMERIPRISE FINANCE INC,Financials,NYSE,United States,0.07,Both
+108,GRMN,GARMIN,Consumer Discretionary,NYSE,United States,0.07,B2C
+109,CVNA,CARVANA CLASS A,Consumer Discretionary,NYSE,United States,0.07,B2C
+110,AZO,AUTOZONE INC,Consumer Discretionary,NYSE,United States,0.07,Both
+111,CARR,CARRIER GLOBAL,Industrials,NYSE,United States,0.07,Both
+112,XEL,XCEL ENERGY INC,Utilities,NASDAQ,United States,0.07,Both
+113,VST,VISTRA,Utilities,NYSE,United States,0.07,Both
+114,ETR,ENTERGY CORP,Utilities,NYSE,United States,0.07,Both
+115,NKE,NIKE CLASS B,Consumer Discretionary,NYSE,United States,0.07,B2C
+116,NU,NU HOLDINGS CLASS A,Financials,NYSE,Brazil,0.07,B2C
+117,EXC,EXELON CORP,Utilities,NASDAQ,United States,0.07,Both
+118,EBAY,EBAY,Consumer Discretionary,NASDAQ,United States,0.06,B2C
+119,HUM,HUMANA,Health Care,NYSE,United States,0.06,Both
+120,TTWO,TAKE TWO INTERACTIVE SOFTWARE,Communication,NASDAQ,United States,0.06,B2C
+121,VTR,VENTAS REIT,Real Estate,NYSE,United States,0.06,Both
+122,PRU,PRUDENTIAL FINANCIAL INC,Financials,NYSE,United States,0.06,Both
+123,XYZ,BLOCK CLASS A,Financials,NYSE,United States,0.06,Both
+124,RSG,REPUBLIC SERVICES INC,Industrials,NYSE,United States,0.06,Both
+125,NTRA,NATERA,Health Care,NASDAQ,United States,0.06,Both
+126,YUM,YUM BRANDS,Consumer Discretionary,NYSE,United States,0.06,B2C
+127,CMG,CHIPOTLE MEXICAN GRILL,Consumer Discretionary,NYSE,United States,0.06,B2C
+128,UAL,UNITED AIRLINES HOLDINGS,Industrials,NASDAQ,United States,0.06,Both
+129,AIG,AMERICAN INTERNATIONAL GROUP,Financials,NYSE,United States,0.06,Both
+130,KDP,KEURIG DR PEPPER INC,Consumer Staples,NASDAQ,United States,0.06,B2C
+131,ED,CONSOLIDATED EDISON,Utilities,NYSE,United States,0.06,Both
+132,IBKR,INTERACTIVE BROKERS GROUP INC CLAS,Financials,NASDAQ,United States,0.06,Both
+133,PCG,PG&E CORP,Utilities,NYSE,United States,0.05,Both
+134,PEG,PUBLIC SERVICE ENTERPRISE GROUP IN,Utilities,NYSE,United States,0.05,Both
+135,HIG,HARTFORD INSURANCE GROUP,Financials,NYSE,United States,0.05,Both
+136,DHI,D R HORTON INC,Consumer Discretionary,NYSE,United States,0.05,B2C
+137,EXPE,EXPEDIA GROUP,Consumer Discretionary,NASDAQ,United States,0.05,B2C
+138,MTB,M&T BANK,Financials,NYSE,United States,0.05,Both
+139,KMB,KIMBERLY CLARK,Consumer Staples,NASDAQ,United States,0.05,B2C
+140,KVUE,KENVUE,Consumer Staples,NYSE,United States,0.05,B2C
+141,CCL,CARNIVAL CORP LTD,Consumer Discretionary,NYSE,United States,0.05,B2C
+142,WEC,WEC ENERGY GROUP INC,Utilities,NYSE,United States,0.05,Both
+143,HBAN,HUNTINGTON BANCSHARES INC,Financials,NASDAQ,United States,0.05,Both
+144,DXCM,DEXCOM INC,Health Care,NASDAQ,United States,0.05,Both
+145,NTRS,NORTHERN TRUST,Financials,NASDAQ,United States,0.05,Both
+146,ACGL,ARCH CAPITAL GROUP,Financials,NASDAQ,United States,0.05,Both
+147,COIN,COINBASE GLOBAL INC CLASS A,Financials,NASDAQ,United States,0.05,Both
+148,RMD,RESMED,Health Care,NYSE,United States,0.05,Both
+149,CNC,CENTENE CORP,Health Care,NYSE,United States,0.05,Both
+150,RJF,RAYMOND JAMES,Financials,NYSE,United States,0.04,Both
+151,KR,KROGER,Consumer Staples,NYSE,United States,0.04,B2C
+152,CASY,CASEYS GENERAL STORES INC,Consumer Staples,NASDAQ,United States,0.04,B2C
+153,EXR,EXTRA SPACE STORAGE REIT,Real Estate,NYSE,United States,0.04,B2C
+154,CFG,CITIZENS FINANCIAL GROUP INC,Financials,NYSE,United States,0.04,Both
+155,AEE,AMEREN,Utilities,NYSE,United States,0.04,Both
+156,LYV,LIVE NATION ENTERTAINMENT,Communication,NYSE,United States,0.04,B2C
+157,ZM,ZOOM COMMUNICATIONS CLASS A,Information Technology,NASDAQ,United States,0.04,Both
+158,DTE,DTE ENERGY,Utilities,NYSE,United States,0.04,Both
+159,HPQ,HP INC,Information Technology,NYSE,United States,0.04,Both
+160,WSM,WILLIAMS SONOMA INC,Consumer Discretionary,NYSE,United States,0.04,B2C
+161,ATO,ATMOS ENERGY,Utilities,NYSE,United States,0.04,Both
+162,ES,EVERSOURCE ENERGY,Utilities,NYSE,United States,0.04,Both
+163,HSY,HERSHEY FOODS,Consumer Staples,NYSE,United States,0.04,B2C
+164,EIX,EDISON INTERNATIONAL,Utilities,NYSE,United States,0.04,Both
+165,DG,DOLLAR GENERAL CORP,Consumer Staples,NYSE,United States,0.04,B2C
+166,RF,REGIONS FINANCIAL,Financials,NYSE,United States,0.04,Both
+167,SYF,SYNCHRONY FINANCIAL,Financials,NYSE,United States,0.04,Both
+168,PPL,PPL CORP,Utilities,NYSE,United States,0.04,Both
+169,CNP,CENTERPOINT ENERGY,Utilities,NYSE,United States,0.04,Both
+170,AWK,AMERICAN WATER WORKS,Utilities,NYSE,United States,0.04,Both
+171,LH,LABCORP HOLDINGS,Health Care,NYSE,United States,0.04,Both
+172,QSR,RESTAURANTS BRANDS INTERNATIONAL,Consumer Discretionary,NYSE,Canada,0.04,B2C
+173,CINF,CINCINNATI FINANCIAL,Financials,NASDAQ,United States,0.04,Both
+174,FE,FIRSTENERGY CORP,Utilities,NYSE,United States,0.04,Both
+175,CPRT,COPART INC,Industrials,NASDAQ,United States,0.04,Both
+176,DGX,QUEST DIAGNOSTICS INC,Health Care,NYSE,United States,0.04,Both
+177,TPR,TAPESTRY,Consumer Discretionary,NYSE,United States,0.04,B2C
+178,PPG,PPG INDUSTRIES,Materials,NYSE,United States,0.04,Both
+179,DRI,DARDEN RESTAURANTS INC,Consumer Discretionary,NYSE,United States,0.04,B2C
+180,AVB,AVALONBAY COMMUNITIES REIT,Real Estate,NYSE,United States,0.04,B2C
+181,FICO,FAIR ISAAC,Information Technology,NYSE,United States,0.03,Both
+182,PHM,PULTEGROUP,Consumer Discretionary,NYSE,United States,0.03,B2C
+183,PFG,PRINCIPAL FINANCIAL GROUP INC,Financials,NASDAQ,United States,0.03,Both
+184,EQR,EQUITY RESIDENTIAL REIT,Real Estate,NYSE,United States,0.03,B2C
+185,NRG,NRG ENERGY INC,Utilities,NYSE,United States,0.03,Both
+186,RBLX,ROBLOX CORP CLASS A,Communication,NYSE,United States,0.03,B2C
+187,DLTR,DOLLAR TREE INC,Consumer Staples,NASDAQ,United States,0.03,B2C
+188,CHD,CHURCH AND DWIGHT INC,Consumer Staples,NYSE,United States,0.03,B2C
+189,TROW,T ROWE PRICE GROUP,Financials,NASDAQ,United States,0.03,Both
+190,SOFI,SOFI TECHNOLOGIES,Financials,NASDAQ,United States,0.03,Both
+191,THC,TENET HEALTHCARE CORP,Health Care,NYSE,United States,0.03,Both
+192,FWONK,LIBERTY MEDIA FORMULA ONE SERIES C,Communication,NASDAQ,United States,0.03,Both
+193,ULTA,ULTA BEAUTY INC,Consumer Discretionary,NASDAQ,United States,0.03,B2C
+194,BURL,BURLINGTON STORES,Consumer Discretionary,NYSE,United States,0.03,B2C
+195,EFX,EQUIFAX,Industrials,NYSE,United States,0.03,Both
+196,AFRM,AFFIRM HOLDINGS CLASS A,Financials,NASDAQ,United States,0.03,Both
+197,KHC,KRAFT HEINZ,Consumer Staples,NASDAQ,United States,0.03,B2C
+198,CMS,CMS ENERGY,Utilities,NYSE,United States,0.03,Both
+199,EL,ESTEE LAUDER INC CLASS A,Consumer Staples,NYSE,United States,0.03,B2C
+200,KEY,KEYCORP,Financials,NYSE,United States,0.03,Both
+201,RDDT,REDDIT CLASS A,Communication,NYSE,United States,0.03,Both
+202,GIS,GENERAL MILLS INC,Consumer Staples,NYSE,United States,0.03,B2C
+203,BRO,BROWN & BROWN INC,Financials,NYSE,United States,0.03,Both
+204,LUV,SOUTHWEST AIRLINES,Industrials,NYSE,United States,0.03,Both
+205,GH,GUARDANT HEALTH,Health Care,NASDAQ,United States,0.03,Both
+206,CPNG,COUPANG CLASS A,Consumer Discretionary,NYSE,United States,0.03,B2C
+207,NI,NISOURCE,Utilities,NYSE,United States,0.03,Both
+208,ROKU,ROKU CLASS A,Communication,NASDAQ,United States,0.03,Both
+209,EVRG,EVERGY,Utilities,NASDAQ,United States,0.03,Both
+210,TSCO,TRACTOR SUPPLY,Consumer Discretionary,NASDAQ,United States,0.03,B2C
+211,VTRS,VIATRIS,Health Care,NASDAQ,United States,0.03,Both
+212,L,LOEWS,Financials,NYSE,United States,0.03,Both
+213,STZ,CONSTELLATION BRANDS CLASS A,Consumer Staples,NYSE,United States,0.03,B2C
+214,GPC,GENUINE PARTS,Consumer Discretionary,NYSE,United States,0.03,Both
+215,EWBC,EAST WEST BANCORP,Financials,NASDAQ,United States,0.03,Both
+216,VIK,VIKING HOLDINGS LTD,Consumer Discretionary,NYSE,United States,0.03,B2C
+217,ESS,ESSEX PROPERTY TRUST REIT,Real Estate,NYSE,United States,0.03,B2C
+218,FCNCA,FIRST CITIZENS BANCSHARES INC CLAS,Financials,NASDAQ,United States,0.03,Both
+219,LNT,ALLIANT ENERGY CORP,Utilities,NASDAQ,United States,0.03,Both
+220,LEN,LENNAR A CORP CLASS A,Consumer Discretionary,NYSE,United States,0.03,B2C
+221,INVH,INVITATION HOMES,Real Estate,NYSE,United States,0.02,B2C
+222,NVR,NVR,Consumer Discretionary,NYSE,United States,0.02,B2C
+223,BBY,BEST BUY,Consumer Discretionary,NYSE,United States,0.02,B2C
+224,FDXF,FEDEX FREIGHT HOLDING COMPANY INC,Industrials,NYSE,United States,0.02,Both
+225,GEN,GEN DIGITAL,Information Technology,NASDAQ,United States,0.02,B2C
+226,ARMK,ARAMARK,Consumer Discretionary,NYSE,United States,0.02,Both
+227,SWK,STANLEY BLACK & DECKER INC,Industrials,NYSE,United States,0.02,Both
+228,TRU,TRANSUNION,Industrials,NYSE,United States,0.02,Both
+229,PNFP,PINNACLE FINANCIAL PARTNERS INC,Financials,NYSE,United States,0.02,Both
+230,SN,SHARKNINJA,Consumer Discretionary,NYSE,United States,0.02,B2C
+231,HST,HOST HOTELS & RESORTS REIT,Real Estate,NASDAQ,United States,0.02,B2C
+232,MAA,MID AMERICA APARTMENT COMMUNITIES,Real Estate,NYSE,United States,0.02,B2C
+233,TSN,TYSON FOODS INC CLASS A,Consumer Staples,NYSE,United States,0.02,Both
+234,MAS,MASCO,Industrials,NYSE,United States,0.02,Both
+235,EQH,EQUITABLE HOLDINGS INC,Financials,NYSE,United States,0.02,Both
+236,COO,COOPER,Health Care,NASDAQ,United States,0.02,Both
+237,SUI,SUN COMMUNITIES REIT INC,Real Estate,NYSE,United States,0.02,B2C
+238,UNM,UNUM,Financials,NYSE,United States,0.02,Both
+239,RL,RALPH LAUREN CLASS A,Consumer Discretionary,NYSE,United States,0.02,B2C
+240,RPM,RPM INTERNATIONAL INC,Materials,NYSE,United States,0.02,Both
+241,ALLE,ALLEGION PLC,Industrials,NYSE,United States,0.02,Both
+242,RKT,ROCKET COMPANIES INC CLASS A,Financials,NYSE,United States,0.02,B2C
+243,AIZ,ASSURANT INC,Financials,NYSE,United States,0.02,Both
+244,DINO,HF SINCLAIR,Energy,NYSE,United States,0.02,Both
+245,RIVN,RIVIAN AUTOMOTIVE INC CLASS A,Consumer Discretionary,NASDAQ,United States,0.02,B2C
+246,GL,GLOBE LIFE,Financials,NYSE,United States,0.02,B2C
+247,TOL,TOLL BROTHERS INC,Consumer Discretionary,NYSE,United States,0.02,B2C
+248,FLUT,FLUTTER ENTERTAINMENT PLC,Consumer Discretionary,NYSE,United States,0.02,B2C
+249,MKC,MCCORMICK & CO NON-VOTING,Consumer Staples,NYSE,United States,0.02,B2C
+250,TXRH,TEXAS ROADHOUSE INC,Consumer Discretionary,NASDAQ,United States,0.02,B2C
+251,HAS,HASBRO,Consumer Discretionary,NASDAQ,United States,0.02,B2C
+252,SGI,SOMNIGROUP INTERNATIONAL,Consumer Discretionary,NYSE,United States,0.02,Both
+253,LII,LENNOX INTERNATIONAL INC,Industrials,NYSE,United States,0.02,Both
+254,CSGP,COSTAR GROUP,Real Estate,NASDAQ,United States,0.02,Both
+255,FIVE,FIVE BELOW,Consumer Discretionary,NASDAQ,United States,0.02,B2C
+256,GDDY,GODADDY CLASS A,Information Technology,NYSE,United States,0.02,Both
+257,DECK,DECKERS OUTDOOR,Consumer Discretionary,NYSE,United States,0.02,B2C
+258,FOXA,FOX CLASS A,Communication,NASDAQ,United States,0.02,Both
+259,DKS,DICKS SPORTING,Consumer Discretionary,NYSE,United States,0.02,B2C
+260,SF,STIFEL FINANCIAL,Financials,NYSE,United States,0.02,Both
+261,CLX,CLOROX,Consumer Staples,NYSE,United States,0.02,B2C
+262,WBS,WEBSTER FINANCIAL,Financials,NYSE,United States,0.02,Both
+263,FNF,FIDELITY NATIONAL FINANCIAL INC,Financials,NYSE,United States,0.02,Both
+264,LVS,LAS VEGAS SANDS,Consumer Discretionary,NYSE,United States,0.02,B2C
+265,ECHO,ECHOSTAR CLASS A,Communication,NASDAQ,United States,0.02,Both
+266,GNRC,GENERAC HOLDINGS,Industrials,NYSE,United States,0.02,Both
+267,SJM,JM SMUCKER,Consumer Staples,NYSE,United States,0.02,B2C
+268,ALLY,ALLY FINANCIAL INC,Financials,NYSE,United States,0.02,Both
+269,OC,OWENS CORNING,Industrials,NYSE,United States,0.02,Both
+270,ELS,EQUITY LIFESTYLE PROPERTIES REIT I,Real Estate,NYSE,United States,0.02,B2C
+271,DOCU,DOCUSIGN,Information Technology,NASDAQ,United States,0.02,Both
+272,TKO,TKO GROUP HOLDINGS INC CLASS A,Communication,NYSE,United States,0.02,Both
+273,FHN,FIRST HORIZON CORP,Financials,NYSE,United States,0.02,Both
+274,DKNG,DRAFTKINGS CLASS A,Consumer Discretionary,NASDAQ,United States,0.02,B2C
+275,UDR,UDR REIT,Real Estate,NYSE,United States,0.02,B2C
+276,CHTR,CHARTER COMMUNICATIONS CLASS A,Communication,NASDAQ,United States,0.02,Both
+277,EHC,ENCOMPASS HEALTH CORP,Health Care,NYSE,United States,0.02,Both
+278,BJ,BJS WHOLESALE CLUB HOLDINGS,Consumer Staples,NYSE,United States,0.02,B2C
+279,PNW,PINNACLE WEST,Utilities,NYSE,United States,0.02,Both
+280,LULU,LULULEMON ATHLETICA,Consumer Discretionary,NASDAQ,United States,0.02,B2C
+281,ALGN,ALIGN TECHNOLOGY,Health Care,NASDAQ,United States,0.02,Both
+282,AMH,AMERICAN HOMES RENT REIT CLASS A,Real Estate,NYSE,United States,0.02,B2C
+283,WTRG,ESSENTIAL UTILITIES INC,Utilities,NYSE,United States,0.02,Both
+284,IVZ,INVESCO LTD,Financials,NYSE,United States,0.02,Both
+285,BPOP,POPULAR INC,Financials,NASDAQ,United States,0.02,Both
+286,PINS,PINTEREST CLASS A,Communication,NYSE,United States,0.02,Both
+287,SCI,SERVICE,Consumer Discretionary,NYSE,United States,0.02,B2C
+288,ELAN,ELANCO ANIMAL HEALTH,Health Care,NYSE,United States,0.02,Both
+289,ROL,ROLLINS INC,Industrials,NYSE,United States,0.02,Both
+290,SEIC,SEI INVESTMENTS,Financials,NASDAQ,United States,0.02,Both
+291,CPT,CAMDEN PROPERTY TRUST REIT,Real Estate,NYSE,United States,0.02,B2C
+292,COKE,COCA COLA CONSOLIDATED INC,Consumer Staples,NASDAQ,United States,0.02,B2C
+293,GFL,GFL ENVIRONMENTAL SUBORDINATE VOTI,Industrials,NYSE,Canada,0.01,Both
+294,WTFC,WINTRUST FINANCIAL CORP,Financials,NASDAQ,United States,0.01,Both
+295,SSB,SOUTHSTATE BANK CORP,Financials,NYSE,United States,0.01,Both
+296,NWSA,NEWS CLASS A,Communication,NASDAQ,United States,0.01,Both
+297,PNR,PENTAIR,Industrials,NYSE,United States,0.01,Both
+298,ZION,ZIONS BANCORPORATION,Financials,NASDAQ,United States,0.01,Both
+299,MOH,MOLINA HEALTHCARE INC,Health Care,NYSE,United States,0.01,Both
+300,W,WAYFAIR CLASS A,Consumer Discretionary,NYSE,United States,0.01,B2C
+301,DPZ,DOMINOS PIZZA,Consumer Discretionary,NASDAQ,United States,0.01,B2C
+302,AES,AES,Utilities,NYSE,United States,0.01,Both
+303,PODD,INSULET,Health Care,NASDAQ,United States,0.01,Both
+304,ENSG,ENSIGN GROUP,Health Care,NASDAQ,United States,0.01,Both
+305,AAL,AMERICAN AIRLINES GROUP,Industrials,NASDAQ,United States,0.01,Both
+306,CFR,CULLEN FROST BANKERS INC,Financials,NYSE,United States,0.01,Both
+307,NYT,NEW YORK TIMES CLASS A,Communication,NYSE,United States,0.01,Both
+308,ORI,OLD REPUBLIC INTERNATIONAL,Financials,NYSE,United States,0.01,Both
+309,PRI,PRIMERICA,Financials,NYSE,United States,0.01,B2C
+310,AFG,AMERICAN FINANCIAL GROUP,Financials,NYSE,United States,0.01,Both
+311,MUSA,MURPHY USA,Consumer Discretionary,NYSE,United States,0.01,B2C
+312,OGE,OGE ENERGY,Utilities,NYSE,United States,0.01,Both
+313,CUBE,CUBESMART REIT,Real Estate,NYSE,United States,0.01,B2C
+314,AMG,AFFILIATED MANAGERS GROUP,Financials,NYSE,United States,0.01,Both
+315,VOYA,VOYA FINANCIAL,Financials,NYSE,United States,0.01,Both
+316,COLB,COLUMBIA BANKING SYSTEM INC,Financials,NASDAQ,United States,0.01,Both
+317,TTC,TORO,Industrials,NYSE,United States,0.01,Both
+318,BEN,FRANKLIN RESOURCES INC,Financials,NYSE,United States,0.01,Both
+319,UHS,UNIVERSAL HEALTH SERVICES INC CLAS,Health Care,NYSE,United States,0.01,Both
+320,MTCH,MATCH GROUP INC,Communication,NASDAQ,United States,0.01,B2C
+321,WAL,WESTERN ALLIANCE,Financials,NYSE,United States,0.01,Both
+322,NCLH,NORWEGIAN CRUISE LINE HOLDINGS,Consumer Discretionary,NYSE,United States,0.01,B2C
+323,PB,PROSPERITY BANCSHARES,Financials,NYSE,United States,0.01,Both
+324,KMX,CARMAX INC,Consumer Discretionary,NYSE,United States,0.01,B2C
+325,TIGO,MILLICOM INTERNATIONAL CELLULAR,Communication,NASDAQ,Sweden,0.01,Both
+326,LAD,LITHIA MOTORS INC CLASS A,Consumer Discretionary,NYSE,United States,0.01,B2C
+327,CRBG,COREBRIDGE FINANCIAL INC,Financials,NYSE,United States,0.01,Both
+328,CHYM,CHIME FINANCIAL CLASS A,Financials,NASDAQ,United States,0.01,B2C
+329,MGM,MGM RESORTS INTERNATIONAL,Consumer Discretionary,NYSE,United States,0.01,B2C
+330,LNC,LINCOLN NATIONAL CORP,Financials,NYSE,United States,0.01,Both
+331,FOX,FOX CLASS B,Communication,NASDAQ,United States,0.01,Both
+332,CBSH,COMMERCE BANCSHARES,Financials,NASDAQ,United States,0.01,Both
+333,WYNN,WYNN RESORTS,Consumer Discretionary,NASDAQ,United States,0.01,B2C
+334,UGI,UGI,Utilities,NYSE,United States,0.01,Both
+335,NFG,NATIONAL FUEL GAS,Utilities,NYSE,United States,0.01,Both
+336,SFM,SPROUTS FARMERS MARKET INC,Consumer Staples,NASDAQ,United States,0.01,B2C
+337,THG,HANOVER INSURANCE GROUP,Financials,NYSE,United States,0.01,Both
+338,CART,MAPLEBEAR,Consumer Staples,NASDAQ,United States,0.01,Both
+339,OMF,ONEMAIN HOLDINGS,Financials,NYSE,United States,0.01,B2C
+340,GME,GAMESTOP CLASS A,Consumer Discretionary,NYSE,United States,0.01,B2C
+341,IDA,IDACORP,Utilities,NYSE,United States,0.01,Both
+342,ETSY,ETSY,Consumer Discretionary,NYSE,United States,0.01,B2C
+343,CAG,CONAGRA BRANDS,Consumer Staples,NYSE,United States,0.01,B2C
+344,LW,LAMB WESTON HOLDINGS,Consumer Staples,NYSE,United States,0.01,Both
+345,AOS,A O SMITH,Industrials,NYSE,United States,0.01,Both
+346,CAVA,CAVA GROUP,Consumer Discretionary,NYSE,United States,0.01,B2C
+347,FAF,FIRST AMERICAN FINANCIAL CORP,Financials,NYSE,United States,0.01,Both
+348,HRL,HORMEL FOODS CORP,Consumer Staples,NYSE,United States,0.01,B2C
+349,H,HYATT HOTELS CORP CLASS A,Consumer Discretionary,NYSE,United States,0.01,B2C
+350,HRB,H&R BLOCK INC,Consumer Discretionary,NYSE,United States,0.01,B2C
+351,ONON,ON HOLDING AG CLASS A,Consumer Discretionary,NYSE,United States,0.01,B2C
+352,CHE,CHEMED CORP,Health Care,NYSE,United States,0.01,Both
+353,MHK,MOHAWK INDUSTRIES,Consumer Discretionary,NYSE,United States,0.01,Both
+354,FNB,FNB CORP,Financials,NYSE,United States,0.01,Both
+355,MSGS,MADISON SQUARE GARDEN SPORTS CLASS,Communication,NYSE,United States,0.01,B2C
+356,LKQ,LKQ CORP,Consumer Discretionary,NASDAQ,United States,0.01,Both
+357,UHALB,U HAUL NON VOTING SERIES N,Industrials,NYSE,United States,0.01,B2C
+358,XP,XP CLASS A INC,Financials,NASDAQ,Brazil,0.01,B2C
+359,M,MACYS INC,Consumer Discretionary,NYSE,United States,0.01,B2C
+360,TAP,MOLSON COORS BREWING CLASS B,Consumer Staples,NYSE,United States,0.01,B2C
+361,LYFT,LYFT CLASS A,Industrials,NASDAQ,United States,0.01,B2C
+362,CROX,CROCS,Consumer Discretionary,NASDAQ,United States,0.01,B2C
+363,FND,FLOOR DECOR HOLDINGS CLASS A,Consumer Discretionary,NYSE,United States,0.01,Both
+364,CZR,CAESARS ENTERTAINMENT INC,Consumer Discretionary,NASDAQ,United States,0.01,B2C
+365,AS,AMER SPORTS INC,Consumer Discretionary,NYSE,United States,0.01,B2C
+366,PRMB,PRIMO BRANDS CLASS A CORP,Consumer Staples,NYSE,United States,0.01,Both
+367,BROS,DUTCH BROS CLASS A,Consumer Discretionary,NYSE,United States,0.01,B2C
+368,Z,ZILLOW GROUP CLASS C,Real Estate,NASDAQ,United States,0.01,Both
+369,CHDN,CHURCHILL DOWNS,Consumer Discretionary,NASDAQ,United States,0.01,B2C
+370,DVA,DAVITA INC,Health Care,NYSE,United States,0.01,Both
+371,VSNT,VERSANT MEDIA GROUP INC CLASS A,Communication,NASDAQ,United States,0.01,Both
+372,FBIN,FORTUNE BRANDS INNOVATIONS INC,Industrials,NYSE,United States,0.01,Both
+373,DUOL,DUOLINGO CLASS A,Consumer Discretionary,NASDAQ,United States,0.01,B2C
+374,ALK,ALASKA AIR GROUP INC,Industrials,NYSE,United States,0.01,Both
+375,OZK,BANK OZK,Financials,NASDAQ,United States,0.01,Both
+376,DBX,DROPBOX INC CLASS A,Information Technology,NASDAQ,United States,0.01,Both
+377,ENPH,ENPHASE ENERGY,Information Technology,NASDAQ,United States,0.01,Both
+378,WH,WYNDHAM HOTELS RESORTS,Consumer Discretionary,NYSE,United States,0.01,B2C
+379,NXST,NEXSTAR MEDIA GROUP INC,Communication,NASDAQ,United States,0.01,Both
+380,ELF,ELF BEAUTY,Consumer Staples,NYSE,United States,0.01,B2C
+381,SLM,SLM CORP,Financials,NASDAQ,United States,0.01,B2C
+382,VFC,VF CORP,Consumer Discretionary,NYSE,United States,0.01,B2C
+383,BC,BRUNSWICK CORP,Consumer Discretionary,NYSE,United States,0.01,Both
+384,CHWY,CHEWY INC CLASS A,Consumer Discretionary,NYSE,United States,0.01,B2C
+385,MTN,VAIL RESORTS,Consumer Discretionary,NYSE,United States,0.01,B2C
+386,TREX,TREX,Industrials,NYSE,United States,0.01,Both
+387,AN,AUTONATION,Consumer Discretionary,NYSE,United States,0.01,B2C
+388,MIDD,MIDDLEBY,Industrials,NASDAQ,United States,0.01,Both
+389,LLYVK,LIBERTY LIVE HOLDINGS INC SERIES C,Communication,NASDAQ,United States,0.01,Both
+390,SIRI,SIRIUSXM HOLDINGS,Communication,NASDAQ,United States,0.01,B2C
+391,CELH,CELSIUS HOLDINGS,Consumer Staples,NASDAQ,United States,0.01,B2C
+392,IRDM,IRIDIUM COMMUNICATIONS,Communication,NASDAQ,United States,0.01,Both
+393,GAP,GAP,Consumer Discretionary,NYSE,United States,0.01,B2C
+394,JHX,JAMES HARDIE INDUSTRIES PLC,Materials,NYSE,Australia,0.01,Both
+395,OLLI,OLLIES BARGAIN OUTLET HOLDINGS INC,Consumer Discretionary,NASDAQ,United States,0.01,B2C
+396,CPB,CAMPBELL SOUP,Consumer Staples,NASDAQ,United States,0.01,B2C
+397,FIGR,FIGURE TECHNOLOGY SOLUTIONS CLASS,Financials,NASDAQ,United States,0.01,Both
+398,VVV,VALVOLINE INC,Consumer Discretionary,NYSE,United States,0.01,B2C
+399,TNL,TRAVEL LEISURE,Consumer Discretionary,NYSE,United States,0.01,B2C
+400,JBS,JBS N V NV CLASS A,Consumer Staples,NYSE,Brazil,0.01,Both
+401,MAT,MATTEL INC,Consumer Discretionary,NASDAQ,United States,0.01,B2C
+402,GSAT,GLOBALSTAR VOTING,Communication,NASDAQ,United States,0.01,Both
+403,BYD,BOYD GAMING,Consumer Discretionary,NYSE,United States,0.01,B2C
+404,NWS,NEWS CLASS B,Communication,NASDAQ,United States,0.01,Both
+405,MDU,MDU RESOURCES GROUP,Utilities,NYSE,United States,0.01,Both
+406,ADT,ADT INC,Consumer Discretionary,NYSE,United States,0.01,Both
+407,THO,THOR INDUSTRIES,Consumer Discretionary,NYSE,United States,0.01,B2C
+408,LBRDK,LIBERTY BROADBAND CORP SERIES C,Communication,NASDAQ,United States,0.01,Both
+409,ACI,ALBERTSONS COMPANY CLASS A,Consumer Staples,NYSE,United States,0.01,B2C
+410,LOPE,GRAND CANYON EDUCATION INC,Consumer Discretionary,NASDAQ,United States,0.01,Both
+411,MORN,MORNINGSTAR,Financials,NASDAQ,United States,0.01,Both
+412,PVH,PVH,Consumer Discretionary,NYSE,United States,0.01,B2C
+413,PAG,PENSKE AUTOMOTIVE GROUP VOTING INC,Consumer Discretionary,NYSE,United States,0.01,Both
+414,DLB,DOLBY LABORATORIES CLASS A,Information Technology,NYSE,United States,0.01,Both
+415,BFAM,BRIGHT HORIZONS FAMILY SOLUTIONS I,Consumer Discretionary,NYSE,United States,0.01,Both
+416,PLNT,PLANET FITNESS INC CLASS A,Consumer Discretionary,NYSE,United States,0.01,B2C
+417,BFB,BROWN FORMAN CLASS B,Consumer Staples,NYSE,United States,0.01,B2C
+418,BBWI,BATH AND BODY WORKS,Consumer Discretionary,NYSE,United States,0.01,B2C
+419,YETI,YETI HOLDINGS,Consumer Discretionary,NYSE,United States,0.00,B2C
+420,FHB,FIRST HAWAIIAN,Financials,NASDAQ,United States,0.00,Both
+421,BHF,BRIGHTHOUSE FINANCIAL,Financials,NASDAQ,United States,0.00,B2C
+422,FRPT,FRESHPET,Consumer Staples,NASDAQ,United States,0.00,B2C
+423,POST,POST HOLDINGS,Consumer Staples,NYSE,United States,0.00,B2C
+424,WING,WINGSTOP,Consumer Discretionary,NASDAQ,United States,0.00,B2C
+425,HAYW,HAYWARD HOLDINGS,Industrials,NYSE,United States,0.00,Both
+426,EEFT,EURONET WORLDWIDE INC,Financials,NASDAQ,United States,0.00,Both
+427,BOKF,BOK FINANCIAL CORP,Financials,NASDAQ,United States,0.00,Both
+428,SMG,SCOTTS MIRACLE GRO,Materials,NYSE,United States,0.00,B2C
+429,CHH,CHOICE HOTELS INTERNATIONAL,Consumer Discretionary,NYSE,United States,0.00,B2C
+430,FRHC,FREEDOM HOLDING CORP,Financials,NASDAQ,United States,0.00,B2C
+431,PPLI,PEOPLE,Communication,NASDAQ,United States,0.00,Both
+432,UI,UBIQUITI,Information Technology,NYSE,United States,0.00,Both
+433,CAR,AVIS BUDGET GROUP INC,Industrials,NASDAQ,United States,0.00,Both
+434,FWONA,LIBERTY MEDIA FORMULA ONE SERIES A,Communication,NASDAQ,United States,0.00,Both
+435,WHR,WHIRLPOOL,Consumer Discretionary,NYSE,United States,0.00,Both
+436,HHH,HOWARD HUGHES HOLDINGS INC,Real Estate,NYSE,United States,0.00,Both
+437,CACC,CREDIT ACCEPTANCE CORP,Financials,NASDAQ,United States,0.00,Both
+438,WU,WESTERN UNION,Financials,NYSE,United States,0.00,B2C
+439,LLYVA,LIBERTY LIVE HOLDINGS INC SERIES A,Communication,NASDAQ,United States,0.00,Both
+440,DDS,DILLARDS INC CLASS A,Consumer Discretionary,NYSE,United States,0.00,B2C
+441,LBTYA,LIBERTY GLOBAL LTD CLASS A,Communication,NASDAQ,United States,0.00,Both
+442,ZG,ZILLOW GROUP CLASS A,Real Estate,NASDAQ,United States,0.00,Both
+443,BIRK,BIRKENSTOCK HOLDING PLC,Consumer Discretionary,NYSE,United States,0.00,B2C
+444,LBTYK,LIBERTY GLOBAL LTD CLASS C,Communication,NASDAQ,United States,0.00,Both
+445,REYN,REYNOLDS CONSUMER PRODUCTS INC,Consumer Staples,NASDAQ,United States,0.00,B2C
+446,BFA,BROWN FORMAN CLASS A,Consumer Staples,NYSE,United States,0.00,B2C
+447,JAN,JANUS LIVING INC CLASS A,Real Estate,NYSE,United States,0.00,B2C
+448,COLM,COLUMBIA SPORTSWEAR,Consumer Discretionary,NASDAQ,United States,0.00,B2C
+449,PPC,PILGRIMS PRIDE CORP,Consumer Staples,NASDAQ,United States,0.00,Both
+450,TFSL,TFS FINANCIAL CORP,Financials,NASDAQ,United States,0.00,Both
+451,SFD,SMITHFIELD FOODS INC,Consumer Staples,NASDAQ,United States,0.00,B2C
+452,LENB,LENNAR CORP CLASS B,Consumer Discretionary,NYSE,United States,0.00,B2C
+453,CBC,CENTRAL BANCOMPANY CLASS A,Financials,NASDAQ,United States,0.00,Both
+454,UHAL,U HAUL HOLDING,Industrials,NYSE,United States,0.00,B2C
+455,LBRDA,LIBERTY BROADBAND CORP SERIES A,Communication,NASDAQ,United States,0.00,Both
