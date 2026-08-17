@@ -111,3 +111,68 @@ Judgement calls worth knowing about:
 ```bash
 python3 scripts/classify_b2c.py
 ```
+
+---
+
+## `russell-1000-consumer-marketing-contacts.csv`
+
+Senior marketing people at the consumer-facing companies, with email and phone.
+**12,666 contacts across 434 of the 444 companies**, up to 50 per company, most
+senior first.
+
+| Column | Description |
+| --- | --- |
+| `company_rank` | Company's rank in the consumer-facing list (by index weight) |
+| `ticker`, `company_name`, `sector`, `audience_type` | Company identity, joined from the classified list |
+| `seniority_rank` | 1 = C-level … 10 = Manager, 99 = other |
+| `seniority_band` | C-level, President, EVP, SVP, VP, Head of, Senior Director, Director, Senior Manager, Manager, Other |
+| `person_rank_in_company` | 1 = most senior marketer at that company |
+| `full_name`, `job_title` | The person |
+| `email`, `professional_email`, `email_status` | Contact email; `professional_email` is the verified work address where available |
+| `mobile_phone`, `other_phones` | Contact phone numbers |
+| `country`, `region`, `city`, `linkedin` | Location and profile |
+| `prospect_id` | Explorium prospect identifier |
+
+Rows are ordered by company (largest index weight first), then by seniority within
+each company, so the top row for each company is its most senior marketer.
+
+### How it was built
+
+Explorium (Vibe Prospecting) in 25 batched rounds:
+
+1. `match-business` — each company resolved by **name + verified domain**. Domains
+   matter: name-only matching mis-resolved 2 of 20 in a control test, so
+   `company-domains.csv` pins every company. Resolved IDs are recorded in
+   `company-business-ids.csv`.
+2. `fetch-entities` — prospects filtered to `job_department = marketing` and
+   `job_level` in c-suite, president, vice president, director, senior manager,
+   owner, founder, partner. Capped at 50 per company. Worldwide, not US-only.
+3. `enrich-prospects` — contact details, both email and phone.
+4. `export-to-csv`, then merged by `scripts/merge_contacts.py`.
+
+### Coverage and caveats
+
+- **82% have an email, 65% a phone, 63% both; 16% have neither.** You pay for the
+  enrichment attempt whether or not a contact detail comes back, so the 16% are
+  rows where Explorium held no contact details.
+- **The median company yields 29 contacts, not 50.** 165 companies hit the 50 cap;
+  the rest simply do not have 50 marketing people at director level or above in the
+  data. 50 is a ceiling, not a quota.
+- **10 companies returned no marketing contacts at all**: CHE, LBRDK, MDU, OGE,
+  PHM, TFSL, UHS, UI, VSNT, WTRG. Mostly holding companies and utilities with thin
+  people data. A recovery pass using alternate legal names and domains rescued 15
+  other companies (Disney, Hershey, Reddit, Campbell, Synchrony among them), whose
+  brand domains resolved to entities carrying no employee records.
+- **Seniority skews mid-level**: ~4,200 Senior Manager and ~4,000 Director versus
+  287 C-level. Small marketing organisations rarely carry a CMO in third-party data.
+- Contacts are worldwide, so regional brand leads at overseas subsidiaries are
+  included.
+- Titles and names arrive lower-cased from the source and are left verbatim.
+
+### Regenerating
+
+Re-run the Explorium rounds, then:
+
+```bash
+python3 scripts/merge_contacts.py <dir-of-round-csvs> data/company-business-ids.csv
+```
