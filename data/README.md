@@ -9,6 +9,7 @@ Every company in the Russell 1000, one row per company.
 | `rank` | Position by index weight, 1 = largest |
 | `ticker` | Exchange ticker symbol |
 | `company_name` | Issuer name as published by the source |
+| `company_url` | Company website, `https://<domain>` |
 | `sector` | GICS-style sector |
 | `exchange` | Listing venue |
 | `location` | Country of domicile |
@@ -33,6 +34,8 @@ holdings file is the standard public proxy for it.
   constituents.
 - `sector` is passed through verbatim from the source. One row (DELL) is reported
   upstream as `Other`.
+- `company_url` is present for 1,014 of 1,021 companies (454 of 455 in the
+  consumer-facing file). See "Company URLs" below.
 
 ### Regenerating
 
@@ -175,4 +178,45 @@ Re-run the Explorium rounds, then:
 
 ```bash
 python3 scripts/merge_contacts.py <dir-of-round-csvs> data/company-business-ids.csv
+```
+
+---
+
+## Company URLs
+
+`company_url` is added to all three company files by `scripts/add_company_url.py`,
+which reads `company-domains.csv` (the hand-verified domains used to pin Explorium
+company matching) and `company-domains-extra.csv` (the remaining constituents).
+
+**Coverage: 1,014 of 1,021 companies**, and 454 of the 455 consumer-facing ones.
+
+### How the domains were established
+
+- Domains are the company's own corporate site, hand-verified per company. They are
+  not taken wholesale from a data provider: Explorium's firmographics returns a
+  `website` field, but it resolved Cisco to `ciscolifeconnections.com` rather than
+  `cisco.com`, so it was used only where a company was too new or too obscure to
+  identify confidently, and only when the returned record clearly matched the issuer.
+- **Every domain is DNS-verified** — all 1,003 resolve. HTTP status is not a usable
+  check here: roughly a fifth of these sites return 403/429 to automated clients.
+  That sweep caught one real error (Dover is `dovercorporation.com`, not
+  `dovercorp.com`) and eight companies whose apex has no A record, which are stored
+  with their `www.` prefix.
+- Companies with more than one listed share class share one website, so the
+  secondary class inherits from its sibling (GOOG from GOOGL, FOX from FOXA, and so
+  on).
+
+### The 7 without a URL
+
+`P` (Everpure), `Q` (Qnity Electronics), `MBGL` (Mobility Global), `KRMN` (Karman
+Holdings), `MFP` (Midera Food Processing), `JAN` (Janus Living) and `FRMI` (Fermi).
+All are recent listings or spin-offs whose corporate site could not be confirmed;
+Explorium matched "Everpure" to a restaurant business and "Qnity Electronics" to an
+unrelated beauty-education firm. Left blank deliberately — a wrong URL is worse than
+an empty cell.
+
+### Regenerating
+
+```bash
+python3 scripts/add_company_url.py
 ```
